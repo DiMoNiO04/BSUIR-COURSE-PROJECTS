@@ -1,0 +1,23 @@
+@import '../../../styles/utils/index.scss';
+
+.description {
+  @include regular16Inter;
+  color: $black;
+  margin-bottom: 40px;
+}
+
+.btns {
+  @include grid(2);
+  grid-gap: 24px;
+}
+
+@media (max-width: $mob) {
+  .description {
+    margin-bottom: 24px;
+  }
+
+  .btns {
+    @include grid(1);
+    row-gap: 12px;
+  }
+}

@@ -1,0 +1,4 @@
+﻿  Source.cpp
+F:\ОАИП\LB_8_LEVEL_2\LB_8_LEVEL_2\Source.cpp(27,27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+F:\ОАИП\LB_8_LEVEL_2\LB_8_LEVEL_2\Source.cpp(28,28): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  LB_8_LEVEL_2.vcxproj -> F:\ОАИП\LB_8_LEVEL_2\Debug\LB_8_LEVEL_2.exe

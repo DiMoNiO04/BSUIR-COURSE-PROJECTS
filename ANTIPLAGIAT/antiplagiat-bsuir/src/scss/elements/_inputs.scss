@@ -1,0 +1,176 @@
+.input {
+  position: relative;
+
+  &.--error {
+    .input__error {
+      transform: translateY(0);
+      @include visible;
+      z-index: 0;
+    }
+
+    .input__input {
+      border-color: $red200;
+    }
+
+    .input__btn-notify {
+      @include visible;
+    }
+
+    .input__btn {
+      @include hidden;
+    }
+  }
+
+  &__label {
+    @include semibold14;
+    color: $blue400;
+    margin-bottom: 5px;
+    display: inline-block;
+
+    span {
+      color: $red200;
+    }
+  }
+
+  &__error {
+    @include light300;
+    color: $red200;
+    transform: translateY(-100%);
+    position: absolute;
+    padding-left: 25px;
+    @include hidden;
+    z-index: -2;
+    transition:
+      z-index 0.2s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  // &:not(.--error) {
+  //   .input__input {
+  //     &:focus {
+  //       outline: 1px solid $blue400;
+  //     }
+  //   }
+  // }
+
+  &__input {
+    background-color: $blue200;
+    border-radius: 10px;
+    padding: 14px 20px 14px 14px;
+    @include flexCenterBetween;
+    cursor: pointer;
+    border: 1px solid transparent;
+    @include transition(border);
+    color: $blue400;
+    @include regular14;
+    width: 100%;
+
+    &::placeholder {
+      color: $grey300;
+    }
+
+    &:hover {
+      border-color: $grey300;
+    }
+
+    &:focus {
+      border-color: $blue400;
+    }
+
+    &:focus ~ .input__btn svg {
+      fill: $blue400;
+    }
+  }
+
+  &__btn-error {
+    @include hidden;
+  }
+
+  &__btn,
+  &__btn-notify {
+    @include sizes(25px, 25px);
+    position: absolute;
+    right: 20px;
+    bottom: calc(50% - 25px);
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+
+    svg {
+      stroke: none;
+      @include transition(fill);
+      stroke-width: 1.5;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__btn-notify {
+    fill: $red200;
+    @include hidden;
+  }
+
+  &__btn {
+    svg {
+      &:first-child {
+        @include hidden();
+      }
+
+      &:last-child {
+        @include visible();
+      }
+    }
+    &.--open {
+      svg {
+        &:last-child {
+          @include hidden();
+        }
+
+        &:first-child {
+          @include visible();
+        }
+      }
+    }
+
+    svg {
+      fill: $grey300;
+
+      @include hover {
+        fill: $blue400;
+      }
+    }
+  }
+
+  &--pass {
+    .input__input {
+      padding-right: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .input {
+    &__input {
+      padding: 5px 14px;
+      border-radius: 4px;
+    }
+
+    &__btn,
+    &__btn-notify {
+      right: 10px;
+      @include sizes(18px, 18px);
+      bottom: calc(50% - 20px);
+    }
+
+    &--pass .input__input {
+      padding-right: 36px;
+    }
+
+    &__error {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}

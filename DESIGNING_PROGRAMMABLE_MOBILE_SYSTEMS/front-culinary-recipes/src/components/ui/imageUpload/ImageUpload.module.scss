@@ -1,0 +1,51 @@
+@import '../../../styles/utils/index.scss';
+
+.fileInput {
+  @include flexStartBetween;
+  column-gap: 40px;
+  position: relative;
+}
+
+.hiddenInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.labelWrapper {
+  position: relative;
+}
+
+.filePreview {
+  @include sizes(240px, 240px);
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .fileInput {
+      column-gap: 32px;
+    }
+  
+    .filePreview {
+      @include sizes(200px, 200px);
+    }
+}
+
+@media (max-width: $mob) {
+  .fileInput {
+      row-gap: 24px;
+      @include flexColumn;
+    }
+  
+    .filePreview {
+      @include fullSize;
+    }
+}

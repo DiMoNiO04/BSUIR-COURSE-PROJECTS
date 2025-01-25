@@ -1,0 +1,137 @@
+.header {
+  background: $blue400;
+
+  &__container {
+    @include flexCenterBetween;
+    padding: 10px 0;
+    height: 70px;
+  }
+
+  &__menus {
+    position: relative;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    cursor: pointer;
+
+    &.--active {
+      .header__btn-arrow {
+        transform: rotate(180deg);
+
+        svg {
+          background-color: $white;
+          fill: $blue400;
+        }
+      }
+    }
+  }
+
+  &__btn-icon {
+    border-radius: 50%;
+    @include sizes(50px, 50px);
+    background-color: $white;
+    @include flexCenter;
+
+    svg {
+      @include sizes(25px, 25px);
+      stroke: $blue400;
+      fill: none;
+      stroke-width: 1.5;
+    }
+  }
+
+  &__btn-arrow {
+    @include transition(transform);
+    @include sizes(25px, 25px);
+  }
+
+  &__btn-arrow svg {
+    fill: $white;
+    stroke: none;
+    background: none;
+    border-radius: 50%;
+    transition:
+      fill 0.2s ease,
+      background 0.2s ease;
+  }
+
+  &__menu {
+    border: 1px solid $blue400;
+    padding: 15px 15px 15px 10px;
+    border-radius: 8px;
+    background-color: $blue50;
+    @include flexColumn;
+    row-gap: 8px;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 183px;
+    @include hidden;
+    z-index: -2;
+
+    &.--active {
+      @include visible;
+      z-index: 2;
+    }
+
+    svg {
+      fill: none;
+      stroke: $blue400;
+    }
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    span {
+      border-bottom: 1px solid transparent;
+      @include regular14;
+      @include transition(border-color);
+    }
+
+    @include hover {
+      svg {
+        &:first-child {
+          @include hidden;
+        }
+        &:last-child {
+          @include visible;
+        }
+      }
+
+      span {
+        color: $blue400;
+        border-color: $blue400;
+      }
+    }
+  }
+
+  &__menu-icon {
+    position: relative;
+    @include sizes(20px, 20px);
+
+    svg {
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+      position: absolute;
+
+      &:first-child {
+        fill: none;
+        stroke: $blue400;
+        @include visible;
+      }
+
+      &:last-child {
+        fill: $blue400;
+        stroke: none;
+        @include hidden;
+      }
+    }
+  }
+}

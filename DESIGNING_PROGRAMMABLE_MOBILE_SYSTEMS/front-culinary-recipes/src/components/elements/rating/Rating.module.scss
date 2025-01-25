@@ -1,0 +1,10 @@
+@import '../../../styles/utils/index.scss';
+
+.rating {
+  @include flexCenterStart;
+  column-gap: 4px;
+
+  svg {
+    @include sizes(16px, 16px);
+  }
+}

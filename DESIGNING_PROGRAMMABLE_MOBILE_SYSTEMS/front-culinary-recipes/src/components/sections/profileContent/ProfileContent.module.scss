@@ -1,0 +1,112 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+  position: relative;
+}
+
+.title {
+  @include bold60Playfair;
+  padding-bottom: 32px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid $greyLight;
+}
+
+.content {
+  max-width: 730px;
+}
+
+.out {
+  @include flexCenterBetween;
+}
+
+.logOut {
+  display: flex;
+  column-gap: 8px;
+  @include regular16Inter;
+  @include transition(color);
+  color: $black;
+
+  img {
+    @include sizes(24px, 24px);
+  }
+
+  svg {
+    @include sizes(24px, 24px);
+  }
+
+  svg path {
+    @include transition(fill);
+  }
+
+  @include hover {
+    color: $orange;
+
+    svg path {
+      fill: $orange;
+    }
+  }
+}
+
+.delete {
+  @include medium16Inter;
+  @include transition(color);
+  color: $orange;
+
+  @include hover {
+    color: $black;
+  }
+}
+
+.form {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $greyLight;
+}
+
+.passBtn {
+  @include flexEnd;
+  width: 100%;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .title {
+    @include bold40Playfair;
+    padding-bottom: 34px;
+    margin-bottom: 50px;
+  }
+
+  .form {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 96px;
+  }
+
+  .title {
+    @include bold30Playfair;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+  }
+
+  .logOut {
+    @include regular14Inter;
+
+    img,
+    svg {
+      @include sizes(20px, 20px);
+    }
+  }
+
+  .delete {
+    @include medium14Inter;
+  }
+}

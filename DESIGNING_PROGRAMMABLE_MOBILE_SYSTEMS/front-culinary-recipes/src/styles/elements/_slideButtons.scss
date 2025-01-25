@@ -1,0 +1,15 @@
+.prevButtonSlider,
+.nextButtonSlider {
+  @include sizes(50px, 50px);
+  @include flexCenter;
+  @include transition(background);
+  background: #ffffff70;
+
+  img {
+    @include sizes(32px, 32px);
+  }
+
+  @include hover {
+    background: $white;
+  }
+}

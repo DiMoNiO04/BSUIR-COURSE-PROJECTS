@@ -1,0 +1,15 @@
+.tippy-box {
+  font-family: 'Inter', sans-serif;
+  @include regular14;
+  background-color: $blue400;
+  color: $blue50;
+  border-radius: 8px;
+}
+
+.tippy-content {
+  padding: 12px;
+}
+
+.tippy-arrow {
+  color: $blue400;
+}

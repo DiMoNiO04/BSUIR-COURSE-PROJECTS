@@ -1,0 +1,41 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  background-color: $pink;
+}
+
+.container {
+  @include grid(2);
+  column-gap: 40px;
+  padding: 110px 0;
+}
+
+.text {
+  @include bold24Playfair;
+  color: $black;
+  margin-bottom: 24px;
+}
+
+.btn {
+  @include flexEnd;
+}
+
+@media (max-width: $mob) {
+  .container {
+    @include flexColumn;
+    row-gap: 24px;
+    padding: 60px 0;
+  }
+
+  .btn {
+    width: 100%;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .text {
+    @include bold18Playfair;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/utils/index.scss';
+
+.icons {
+  @include flexCenter;
+  column-gap: 32px;
+}
+
+.icon {
+  @include sizes(20px, 20px);
+  @include transition(transform);
+  line-height: 0;
+
+  @include hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: $mob) {
+  .icons {
+    column-gap: 40px;
+  }
+}

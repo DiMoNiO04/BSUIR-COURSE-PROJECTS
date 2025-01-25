@@ -1,0 +1,12 @@
+enum ESortOptions {
+  TITLE_A_TO_Z = 1,
+  TITLE_Z_TO_A,
+  CREATED_AT_OLDEST,
+  CREATED_AT_NEWEST,
+  COOKING_TIME_MIN,
+  COOKING_TIME_MAX,
+  CALORIES_MIN,
+  CALORIES_MAX,
+}
+
+export default ESortOptions;

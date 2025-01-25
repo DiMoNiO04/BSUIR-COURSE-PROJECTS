@@ -1,0 +1,152 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 64px;
+}
+
+.blocks {
+  @include flexColumn;
+  row-gap: 60px;
+}
+
+.block {
+  @include flexColumn;
+  row-gap: 20px;
+
+  &:not(:last-child) {
+    padding-bottom: 32px;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.subtitle {
+  @include regular24Inter;
+  font-style: italic;
+  margin: 0;
+}
+
+.cards {
+  @include grid(4);
+  grid-gap: 30px;
+}
+
+.searchSortContainer {
+  @include flexCenterBetween;
+  margin-bottom: 48px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $black;
+  column-gap: 48px;
+
+  input {
+    @include regular18Inter;
+    color: $black;
+    border: none;
+    background-color: transparent;
+    flex-shrink: 0;
+  }
+
+  span {
+    @include regular16Inter;
+    flex-shrink: 0;
+  }
+}
+
+.sortContainer {
+  @include flexCenterBetween;
+  column-gap: 32px;
+  flex-shrink: 0;
+}
+
+@media (max-width: $tablet) {
+  .searchSortContainer {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    margin-top: 120px;
+  }
+
+  .title {
+    @include bold40Playfair;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  .blocks {
+    row-gap: 48px;
+  }
+
+  .block {
+    row-gap: 16px;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+    }
+  }
+
+  .subtitle {
+    @include regular18Inter;
+  }
+
+  .cards {
+    @include grid(3);
+  }
+}
+
+@media (max-width: $mob) {
+  .searchSortContainer {
+    flex-wrap: 0;
+    margin-bottom: 24px;
+    row-gap: 12px;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sortContainer {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .section {
+    margin-top: 100px;
+  }
+
+  .title {
+    @include bold24Playfair;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+
+  .blocks {
+    row-gap: 32px;
+  }
+
+  .block {
+    row-gap: 12px;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .subtitle {
+    @include regular16Inter;
+  }
+
+  .cards {
+    @include grid(2);
+    grid-gap: 24px;
+  }
+}

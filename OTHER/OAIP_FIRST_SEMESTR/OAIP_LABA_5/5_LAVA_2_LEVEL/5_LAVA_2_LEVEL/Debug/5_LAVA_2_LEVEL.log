@@ -1,0 +1,3 @@
+﻿  Source.cpp
+F:\ОАИП\5_LAVA_2_LEVEL\5_LAVA_2_LEVEL\Source.cpp(7,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  5_LAVA_2_LEVEL.vcxproj -> F:\ОАИП\5_LAVA_2_LEVEL\Debug\5_LAVA_2_LEVEL.exe

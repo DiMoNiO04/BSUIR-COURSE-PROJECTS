@@ -1,0 +1,72 @@
+@import '../../../styles/utils/index.scss';
+
+.title {
+  @include bold30Playfair;
+  margin-bottom: 36px;
+}
+
+.list {
+  @include flexColumn;
+  row-gap: 24px;
+  counter-reset: list-counter;
+
+  li {
+    @include regular18Inter;
+    @include flexStart;
+    column-gap: 8px;
+    position: relative;
+    counter-increment: list-counter;
+
+    &::before {
+      content: counter(list-counter);
+      @include sizes(24px, 24px);
+      @include regular14Inter;
+      @include flexCenter;
+      border-radius: 50%;
+      background-color: $orange;
+      position: relative;
+      top: 0;
+      flex-shrink: 0;
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .title {
+    @include bold24Playfair;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    row-gap: 20px;
+
+    li {
+      @include regular16Inter;
+
+      &::before {
+        @include sizes(20px, 20px);
+        @include regular12Inter;
+        top: 2px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .list {
+    row-gap: 16px;
+
+    li {
+      @include regular16Inter;
+
+      &::before {
+        @include regular12Inter;
+      }
+    }
+  }
+}

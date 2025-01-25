@@ -1,0 +1,72 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include flexColumn;
+  border-radius: 12px;
+  border: 1px solid $greyLight;
+  overflow: hidden;
+
+  @include hover {
+    .img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.img {
+  @include sizes(100%, 265px);
+  @include transition(transform);
+  border-radius: 12px 12px 0 0;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.info {
+  background-color: $white;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  padding: 16px 22px 27px;
+}
+
+.name {
+  @include croppingText(2);
+  @include semibold20Inter;
+  color: $black;
+  margin-bottom: 16px;
+  height: 56px;
+}
+
+.author {
+  @include flexCenterStart;
+  column-gap: 6px;
+}
+
+.authorIcon {
+  @include sizes(32px, 32px);
+}
+
+.authorName {
+  @include regular14Inter;
+  color: $black;
+}
+
+.block {
+  padding: 24px;
+  display: flex;
+  column-gap: 24px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.blockItem {
+  @include regular12Inter;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  color: $grey;
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/utils/index.scss';
+
+.title {
+  @include bold36Playfair;
+  color: $black;
+  margin: 0;
+}
+
+.block {
+  @include flexCenterBetween;
+  margin-bottom: 40px;
+  column-gap: 40px;
+}
+
+@media (max-width: $mob) {
+  .title {
+    @include bold30Playfair;
+    margin: 0;
+  }
+
+  .block {
+    margin-bottom: 24px;
+  }
+}

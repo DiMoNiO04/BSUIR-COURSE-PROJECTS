@@ -1,0 +1,100 @@
+@import '../../../../styles/utils/index.scss';
+
+.block {
+  @include mb(60px);
+}
+
+.titleBlock {
+  @include regular24Inter;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: $orange;
+}
+
+.cards {
+  @include grid(3);
+  grid-gap: 40px;
+}
+
+.searchSortContainer {
+  @include flexCenterBetween;
+  margin-bottom: 48px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $greyLight;
+  column-gap: 48px;
+
+  input {
+    @include regular18Inter;
+    color: $black;
+    border: none;
+    background-color: transparent;
+    flex-shrink: 0;
+  }
+
+  span {
+    @include regular16Inter;
+    flex-shrink: 0;
+  }
+}
+
+.sortContainer {
+  @include flexCenterBetween;
+  column-gap: 32px;
+  flex-shrink: 0;
+}
+
+@media (max-width: $tablet) {
+  .searchSortContainer {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    row-gap: 12px;
+    justify-content: space-between;
+
+    & > div,
+    input {
+      width: 100%;
+    }
+  }
+
+  .block {
+    @include mb(40px);
+  }
+
+  .titleBlock {
+    margin-bottom: 16px;
+  }
+
+  .cards {
+    @include grid(2);
+    grid-gap: 32px;
+  }
+}
+
+@media (max-width: $mob) {
+  .searchSortContainer {
+    flex-wrap: 0;
+    margin-bottom: 24px;
+    row-gap: 12px;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sortContainer {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .block {
+    @include mb(32px);
+  }
+
+  .cards {
+    grid-gap: 20px;
+  }
+}

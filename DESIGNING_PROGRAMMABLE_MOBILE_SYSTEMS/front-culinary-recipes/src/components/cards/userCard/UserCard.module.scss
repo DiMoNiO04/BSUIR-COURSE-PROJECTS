@@ -1,0 +1,102 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include flexStartBetween;
+  @include mb(30px);
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey;
+  column-gap: 60px;
+}
+
+.info {
+  @include flexColumn;
+  row-gap: 8px;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  @include regular18Inter;
+  color: $orange;
+
+  b {
+    @include semibold18Inter;
+    color: $black;
+  }
+}
+
+.actions {
+  @include flexColumn;
+  justify-content: flex-end;
+  align-items: flex-end;
+  row-gap: 12px;
+
+  button {
+    width: fit-content;
+    flex-shrink: 0;
+  }
+}
+
+.banSection,
+.roleSection {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.banInput {
+  @include regular14Inter;
+  width: 100%;
+  color: $black;
+  padding: 6px;
+  margin: 0;
+  border: none;
+  border: 1px solid $black;
+
+  &:read-only {
+    color: $greyLight;
+    cursor: default;
+  }
+}
+
+@media (max-width: $tablet) {
+  .card {
+    @include mb(24px);
+    padding-bottom: 16px;
+    column-gap: 40px;
+  }
+
+  .infoBlock {
+    @include regular16Inter;
+  }
+
+  .actions {
+    row-gap: 10px;
+  }
+
+  .banSection,
+  .roleSection {
+    column-gap: 10px;
+  }
+
+  .banInput {
+    padding: 4px;
+  }
+}
+
+@media (max-width: $mob) {
+  .card {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  .info {
+    @include flexColumn;
+    row-gap: 8px;
+  }
+
+  .actions {
+    align-items: flex-start;
+  }
+}

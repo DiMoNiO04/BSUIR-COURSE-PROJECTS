@@ -1,0 +1,94 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include mb(30px);
+  @include flexStartBetween;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey;
+  column-gap: 60px;
+}
+
+.btns {
+  display: flex;
+  column-gap: 20px;
+}
+
+.btn {
+  @include sizes(32px, 32px);
+  @include flexCenter;
+  @include transition(background-color);
+  background-color: $greyLight;
+  border-radius: 4px;
+  z-index: 2;
+
+  @include hover {
+    background-color: $white;
+  }
+
+  svg {
+    @include sizes(24px, 24px);
+  }
+}
+
+.title {
+  @include bold24Playfair;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.desc {
+  @include regular18Inter;
+}
+
+@media (max-width: $tablet) {
+  .card {
+    @include mb(24px);
+    padding-bottom: 16px;
+    column-gap: 40px;
+  }
+
+  .btns {
+    column-gap: 16px;
+  }
+
+  .btn {
+    @include sizes(28px, 28px);
+
+    svg {
+      @include sizes(20px, 20px);
+    }
+  }
+
+  .desc {
+    @include regular16Inter;
+  }
+}
+
+@media (max-width: $mob) {
+  .card {
+    @include mb(20px);
+    padding-bottom: 12px;
+    column-gap: 32px;
+  }
+
+  .btns {
+    column-gap: 12px;
+  }
+
+  .btn {
+    @include sizes(24px, 24px);
+
+    svg {
+      @include sizes(16px, 16px);
+    }
+  }
+
+  .desc {
+    @include regular14Inter;
+  }
+
+  .title {
+    @include bold18Playfair;
+    margin-bottom: 8px;
+  }
+}

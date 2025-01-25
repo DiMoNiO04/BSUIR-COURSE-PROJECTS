@@ -1,0 +1,106 @@
+.more-btns {
+  position: relative;
+
+  &__btn {
+    @include sizes(20px, 20px);
+
+    svg {
+      stroke: none;
+      fill: $blue400;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 157px;
+    right: 8px;
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: 1px solid $blue400;
+    @include flexColumn;
+    row-gap: 8px;
+    @include hidden;
+    background-color: #fff;
+    z-index: -2;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      z-index 0.2s ease;
+
+    &.--active {
+      @include visible;
+      z-index: 2;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    span {
+      border-bottom: 1px solid transparent;
+      @include regular14;
+      @include transition(border-color);
+    }
+
+    &:not(:disabled) {
+      @include hover {
+        svg {
+          &:first-child {
+            @include hidden;
+          }
+
+          &:last-child {
+            @include visible;
+          }
+        }
+
+        span {
+          color: $blue400;
+          border-color: $blue400;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      span {
+        color: $grey200;
+      }
+      svg:first-child,
+      svg:last-child {
+        stroke: $grey200;
+      }
+    }
+  }
+
+  &__link-icon {
+    @include sizes(20px, 20px);
+    position: relative;
+    flex-shrink: 0;
+
+    svg {
+      position: absolute;
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+      &:first-child {
+        fill: none;
+        stroke: $blue400;
+        @include visible;
+      }
+
+      &:last-child {
+        fill: $blue400;
+        stroke: none;
+        @include hidden;
+      }
+    }
+  }
+}

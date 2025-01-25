@@ -1,0 +1,71 @@
+.cab-role {
+  &__content {
+    padding-bottom: 16px;
+  }
+
+  &__block {
+    padding: 23px 25px;
+    border-bottom: 1px solid $blue200;
+    display: grid;
+    grid-template-columns: 10% 42% 48%;
+    column-gap: 20px;
+  }
+
+  &__block-item {
+    div {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        @include regular14;
+        @include croppingText(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .cab-role {
+    &__block {
+      padding: 9px 25px;
+      grid-template-columns: 9.5% 44.5% 42%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cab-role {
+    &__block {
+      grid-template-columns: repeat(1, 1fr);
+      background-color: $white;
+      row-gap: 12px;
+      border-radius: 4px;
+      padding: 12px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__block-item {
+      div {
+        &:first-child {
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          margin-bottom: 5px;
+        }
+        &:last-child {
+          -webkit-line-clamp: inherit;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

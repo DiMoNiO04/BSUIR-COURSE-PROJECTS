@@ -1,0 +1,88 @@
+const team = [
+  {
+    id: 1,
+    img: '/img/team/hamChuwon.webp',
+    name: 'Ham Chuwon',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 2,
+    img: '/img/team/izabellaTabakova.webp',
+    name: 'Izabella Tabakova',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 3,
+    img: '/img/team/fatimaDelgadillo.webp',
+    name: 'Fatima Delgadillo',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 4,
+    img: '/img/team/harrisonPhillips.webp',
+    name: 'Harrison Phillips',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 5,
+    img: '/img/team/corabelleDurrad.webp',
+    name: 'Corabelle Durrad',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 6,
+    img: '/img/team/pabloCambeiro.webp',
+    name: 'Pablo Cambeiro',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 7,
+    img: '/img/team/nonkosiJoyi.webp',
+    name: 'Nonkosi Joyi',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 8,
+    img: '/img/team/wenYahui.webp',
+    name: 'Wen Yahui',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 9,
+    img: '/img/team/jurrienOldhof.webp',
+    name: 'Jurrien Oldhof',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 10,
+    img: '/img/team/tallahCotton.webp',
+    name: 'Tallah Cotton',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 11,
+    img: '/img/team/qinShi.webp',
+    name: 'Qin Shi',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+  {
+    id: 12,
+    img: '/img/team/suHua.webp',
+    name: 'Su Hua',
+    description: 'Chef Extraordinaire',
+    link: '#',
+  },
+];
+
+export default team;

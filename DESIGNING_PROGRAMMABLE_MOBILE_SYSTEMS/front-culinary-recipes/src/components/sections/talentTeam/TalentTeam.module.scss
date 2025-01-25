@@ -1,0 +1,36 @@
+@import '../../../styles/utils/index.scss';
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  @include grid(6);
+  grid-gap: 30px;
+}
+
+@media (max-width: $tablet) {
+  .title {
+    @include bold40Playfair;
+    margin-bottom: 32px;
+  }
+
+  .cards {
+    @include grid(4);
+  }
+}
+
+@media (max-width: $mob) {
+  .title {
+    @include bold24Playfair;
+    margin-bottom: 28px;
+  }
+
+  .cards {
+    @include grid(3);
+    grid-gap: 24px;
+  }
+}

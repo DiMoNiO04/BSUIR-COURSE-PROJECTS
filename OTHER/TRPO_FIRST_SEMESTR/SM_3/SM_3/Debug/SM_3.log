@@ -1,0 +1,3 @@
+﻿  Source.cpp
+F:\Study 1 semester\ТРПО\SM_3\SM_3\Source.cpp(29,25): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+  SM_3.vcxproj -> F:\Study 1 semester\ТРПО\SM_3\Debug\SM_3.exe

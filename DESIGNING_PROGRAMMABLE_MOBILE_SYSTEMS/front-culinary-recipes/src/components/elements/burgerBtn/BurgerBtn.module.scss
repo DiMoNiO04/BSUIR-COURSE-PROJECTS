@@ -1,0 +1,35 @@
+@import '../../../styles/utils/index.scss';
+
+.burger {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .burger {
+    @include flexColumn;
+    @include sizes(24px, 24px);
+    @include transition(transform);
+    justify-content: space-around;
+
+    .line {
+      @include sizes(100%, 2px);
+      display: block;
+      background-color: $black;
+      transition: all 0.3s ease;
+    }
+
+    &.open {
+      .line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+}

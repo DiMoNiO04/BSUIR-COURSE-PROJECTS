@@ -1,0 +1,20 @@
+@import '../../../styles/utils/index.scss';
+
+.btn {
+  margin-top: 40px;
+  @include flexCenter;
+}
+
+.form {
+  margin-bottom: 60px;
+}
+
+@media (max-width: $mob) {
+  .form {
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    margin-top: 24px;
+  }
+}

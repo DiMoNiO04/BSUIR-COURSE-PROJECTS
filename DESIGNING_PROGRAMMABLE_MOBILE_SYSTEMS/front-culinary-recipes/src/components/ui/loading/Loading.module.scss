@@ -1,0 +1,31 @@
+@import '../../../styles/utils/index.scss';
+
+.block {
+  @include fullSize;
+  @include flexCenter;
+  padding: 40px;
+}
+
+.img {
+  @include sizes(120px, 120px);
+}
+
+@media (max-width: $tablet) {
+  .block {
+    padding: 32px;
+  }
+
+  .img {
+    @include sizes(90px, 90px);
+  }
+}
+
+@media (max-width: $tablet) {
+  .block {
+    padding: 20px;
+  }
+
+  .img {
+    @include sizes(60px, 60px);
+  }
+}

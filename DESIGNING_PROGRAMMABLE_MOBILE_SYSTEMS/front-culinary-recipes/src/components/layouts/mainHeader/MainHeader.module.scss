@@ -1,0 +1,145 @@
+@import '../../../styles/utils/index.scss';
+
+.header {
+  &.scroll {
+    .top {
+      background-color: $whiteDark;
+    }
+  }
+}
+
+.container {
+  @include flexColumn;
+}
+
+.top {
+  background-color: $whiteDark;
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.topContainer {
+  @include flexCenterBetween;
+}
+
+.topRight {
+  @include flexCenter;
+  column-gap: 40px;
+}
+
+.bottom {
+  margin-top: 56px;
+}
+
+.bottomContainer {
+  @include flexColumn;
+  justify-content: center;
+  align-items: center;
+  row-gap: 56px;
+  padding: 64px;
+}
+
+.topLogo,
+.bottomSocials {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .header {
+    &.open {
+      .bottom {
+        transform: translateY(0);
+      }
+
+      .top {
+        background-color: $whiteDark;
+      }
+    }
+  }
+
+  .bottomContainer {
+    row-gap: 40px;
+    padding: 32px;
+  }
+
+  .manu {
+    column-gap: 40px;
+  }
+
+  .bottom {
+    @include sizes(100%, auto);
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateY(-200%);
+    z-index: 98;
+    overflow: scroll;
+    height: calc(100% - 55px);
+    transition: transform 0.2s ease;
+
+    .bottomCont {
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+  .top {
+    background-color: $white;
+  }
+
+  .socials {
+    display: block;
+  }
+
+  .bottomLogo {
+    display: none;
+  }
+
+  .bottomContainer {
+    padding: 24px 0;
+    row-gap: 0;
+    background-color: $whiteDark;
+  }
+
+  .top {
+    padding: 16px 0;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .topLogo {
+    @include sizes(90px, 30px);
+    display: block;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .topRight {
+    column-gap: 24px;
+  }
+
+  .bottomSocials {
+    @include flexEnd;
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: $mob) {
+  .bottomContainer {
+    padding: 24px 16px;
+  }
+
+  .bottomSocials {
+    padding: 0;
+  }
+}

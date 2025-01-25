@@ -1,0 +1,55 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include flexColumn;
+  row-gap: 8px;
+  position: relative;
+
+  @include hover {
+    .name {
+      color: $grey;
+    }
+
+    .img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.like {
+  @include sizes(32px, 32px);
+  @include flexCenter;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: $white;
+  border-radius: 4px;
+  z-index: 2;
+
+  svg {
+    @include sizes(24px, 24px);
+  }
+}
+
+.img {
+  @include transition(transform);
+  border-radius: 6px;
+
+  img {
+    border-radius: 6px;
+  }
+}
+
+.name {
+  @include semibold18Inter;
+  @include transition(color);
+  @include croppingText(2);
+  text-align: left;
+  color: $black;
+}
+
+@media (max-width: $mob) {
+  .name {
+    @include semibold14Inter;
+  }
+}

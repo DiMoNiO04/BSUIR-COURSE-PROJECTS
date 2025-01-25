@@ -1,0 +1,152 @@
+.cab-results {
+  &__content {
+    padding-bottom: 16px;
+  }
+
+  &__result {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      position: absolute;
+    }
+    svg {
+      position: absolute;
+      @include sizes(20px, 20px);
+      fill: none;
+      @include hidden;
+      margin-left: -1px;
+
+      &.success-icon {
+        stroke: $green200;
+      }
+
+      &.no-success-icon {
+        stroke: $red200;
+      }
+    }
+  }
+
+  &__block {
+    border-bottom: 1px solid $blue200;
+    padding: 24px 25px 16px 25px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 7% 25% 12% 13% 32.5% 2% 1.5%;
+
+    div {
+      &:nth-child(4) {
+        margin-left: 25%;
+      }
+    }
+
+    &.--success .cab-results__result {
+      svg {
+        &.success-icon {
+          @include visible;
+        }
+      }
+
+      p {
+        @include hidden;
+      }
+    }
+
+    &.--no-success .cab-results__result {
+      svg {
+        &.no-success-icon {
+          @include visible;
+        }
+      }
+
+      p {
+        @include hidden;
+      }
+    }
+  }
+
+  &__block-item {
+    div {
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        @include regular14;
+        @include croppingText(1);
+        @include fullSize;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .cab-results {
+    &__block {
+      padding: 9px 25px;
+      grid-template-columns: 7% 33.5% 15% 12% 18% 2% 1.5%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cab-results {
+    &__block-item {
+      div {
+        &:first-child {
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          margin-bottom: 5px;
+        }
+
+        &:last-child {
+          -webkit-line-clamp: inherit;
+          line-height: 18px;
+        }
+      }
+
+      &:nth-child(6) {
+        display: flex;
+        column-gap: 15px;
+      }
+    }
+
+    &__block {
+      grid-template-columns: repeat(1, 1fr);
+      background-color: $white;
+      border-radius: 4px;
+      row-gap: 12px;
+      position: relative;
+      padding: 12px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      div:nth-child(4) {
+        margin: 0;
+      }
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__more {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+
+    &__result {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+}

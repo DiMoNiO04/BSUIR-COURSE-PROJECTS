@@ -1,0 +1,20 @@
+@import '../../../styles/utils/index.scss';
+
+.searchBtn {
+  @include sizes(28px, 28px);
+  @include transition(transform);
+
+  svg {
+    @include fullSize;
+  }
+
+  @include hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: $mob) {
+  .searchBtn {
+    @include sizes(20px, 20px);
+  }
+}

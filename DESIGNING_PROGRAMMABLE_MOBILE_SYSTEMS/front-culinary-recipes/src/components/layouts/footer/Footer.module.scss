@@ -1,0 +1,152 @@
+@import '../../../styles/utils/index.scss';
+
+.footer {
+  background-color: $whiteDark;
+  padding: 100px 0 40px;
+}
+
+.top {
+  @include flexStartBetween;
+  padding-bottom: 90px;
+  border-bottom: 2px solid $greyLight;
+}
+
+.bottom {
+  @include flexCenterBetween;
+  margin-top: 28px;
+}
+
+.year {
+  @include regular14Inter;
+  color: $grey;
+}
+
+.topLeft {
+  @include flexColumn;
+  row-gap: 16px;
+  max-width: 350px;
+}
+
+.topText {
+  @include regular16Inter;
+  color: $grey;
+}
+
+.logo {
+  @include sizes(130px, 40px);
+}
+
+.menu {
+  @include grid(3);
+  column-gap: 80px;
+}
+
+.menuBlock,
+.menuBlockList {
+  @include flexColumn;
+  row-gap: 12px;
+}
+
+.menuBlockTitle {
+  @include medium18Inter;
+  color: $black;
+}
+
+.menuBlockList {
+  display: flex;
+
+  li,
+  a {
+    @include regular16Inter;
+    @include transition(color);
+    color: $grey;
+
+    @include hover {
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .top {
+    @include flexColumn;
+    row-gap: 28px;
+    padding-bottom: 28px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mob) {
+  .footer {
+    padding: 40px 0 40px;
+  }
+
+  .logo {
+    @include sizes(90px, 30px);
+  }
+
+  .top {
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+  }
+
+  .topLeft {
+    @include regular14Inter;
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding: 0;
+  }
+
+  .menu {
+    @include flexColumn;
+    row-gap: 24px;
+  }
+
+  .menuBlock {
+    row-gap: 0;
+    border-bottom: 1px solid $greyLight;
+  }
+
+  .menuBlockList {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .menuBlockTitle {
+    @include medium16Inter;
+    @include flexCenterBetween;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: '';
+      @include sizes(24px, 24px);
+      display: block;
+      background: url('../../../../public/icons/arrowDown.svg');
+      transition: transform 0.3s;
+    }
+  }
+
+  .open .menuBlockList {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 12px;
+  }
+
+  .open .menuBlockTitle::after {
+    transform: rotate(180deg);
+  }
+}

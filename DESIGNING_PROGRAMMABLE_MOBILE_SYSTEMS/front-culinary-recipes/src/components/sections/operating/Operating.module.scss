@@ -1,0 +1,43 @@
+@import '../../../styles/utils/index.scss';
+
+.container {
+  max-width: 700px;
+}
+
+.title {
+  @include semibold20Inter;
+  color: $black;
+  margin-bottom: 12px;
+}
+
+.description {
+  @include regular14Inter;
+  color: $grey;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid $greyLight;
+}
+
+.socials {
+  @include flexStart;
+}
+
+@media (max-width: $tablet) {
+  .description {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: $mob) {
+  .title {
+    @include semibold14Inter;
+    margin-bottom: 14px;
+  }
+
+  .description {
+    @include regular12Inter;
+    padding-bottom: 40px;
+    margin-bottom: 24px;
+  }
+}

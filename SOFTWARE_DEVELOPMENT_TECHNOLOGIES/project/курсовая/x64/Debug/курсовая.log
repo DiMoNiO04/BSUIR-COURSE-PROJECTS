@@ -1,0 +1,16 @@
+﻿  Admin.cpp
+  Autorization.cpp
+  EditFunctions.cpp
+  Functions.cpp
+  Main.cpp
+  MainAdmin.cpp
+  SearchSort.cpp
+  Sha256.cpp
+E:\Новая папка\STUDY_2_SEMESTER\TRPO_KURSOVOY_PROJECT\курсовая\Sha256.cpp(126,61): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+  User.cpp
+  Validation.cpp
+E:\Новая папка\STUDY_2_SEMESTER\TRPO_KURSOVOY_PROJECT\курсовая\Validation.cpp(105,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+E:\Новая папка\STUDY_2_SEMESTER\TRPO_KURSOVOY_PROJECT\курсовая\Validation.cpp(173): warning C4715: isLoginPasswordRangeCorrect: значение возвращается не при всех путях выполнения
+E:\Новая папка\STUDY_2_SEMESTER\TRPO_KURSOVOY_PROJECT\курсовая\Autorization.cpp(66): warning C4715: checkLoginAndPasswordForEntrance: значение возвращается не при всех путях выполнения
+  курсовая.vcxproj -> E:\Новая папка\STUDY_2_SEMESTER\TRPO_KURSOVOY_PROJECT\x64\Debug\курсовая.exe

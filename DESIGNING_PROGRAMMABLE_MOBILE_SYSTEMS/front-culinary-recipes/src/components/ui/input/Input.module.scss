@@ -1,0 +1,97 @@
+@import '../../../styles/utils/index.scss';
+
+.input {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.errorInput {
+  .icon svg path {
+    fill: $red;
+  }
+
+  .wrapper {
+    border-color: $red;
+  }
+}
+.wrapper {
+  @include flexCenterStart;
+  column-gap: 8px;
+  position: relative;
+  padding: 0 12px 12px;
+  border-bottom: 2px solid $greyLight;
+}
+
+.error {
+  @include regular12Inter;
+  color: $red;
+  position: absolute;
+  left: 12px;
+  bottom: -16px;
+}
+
+.field {
+  @include regular14Inter;
+  width: 100%;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &:read-only {
+    color: $greyLight;
+    cursor: default;
+  }
+}
+
+.icon svg {
+  display: block;
+  @include sizes(24px, 24px);
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  @include sizes(24px, 24px);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileInputLabel {
+  display: inline-block;
+  background-color: $grey;
+  color: $white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: grey;
+  }
+}
+
+@media (max-width: $mob) {
+  .wrapper {
+    @include mb(24px);
+  }
+
+  .icon svg,
+  .toggleBtn {
+    @include sizes(20px, 20px);
+  }
+
+    .fileInputLabel {
+      padding: 6px 12px;
+    }
+}

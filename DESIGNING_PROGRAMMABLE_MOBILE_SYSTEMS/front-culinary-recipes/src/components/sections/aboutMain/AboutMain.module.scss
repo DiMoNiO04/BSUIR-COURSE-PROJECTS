@@ -1,0 +1,78 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 50px;
+}
+
+.content {
+  @include flexColumn;
+  row-gap: 40px;
+}
+
+.subtitle {
+  @include bold60Playfair;
+  color: $black;
+  max-width: 930px;
+  margin: 0;
+}
+
+.description {
+  @include regular24Inter;
+  color: $black;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .title {
+    @include bold40Playfair;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+  }
+
+  .content {
+    row-gap: 32px;
+  }
+
+  .subtitle {
+    @include bold40Playfair;
+  }
+
+  .description {
+    @include regular18Inter;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 96px;
+  }
+
+  .title {
+    @include bold24Playfair;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .content {
+    row-gap: 16px;
+  }
+
+  .subtitle {
+    @include bold24Playfair;
+  }
+
+  .description {
+    @include regular14Inter;
+  }
+}

@@ -1,0 +1,119 @@
+@import '../../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.titles {
+  @include flexColumn;
+  row-gap: 16px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 64px;
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  margin: 0;
+}
+
+.description {
+  @include regular18Inter;
+  font-style: italic;
+}
+
+.content {
+  @include flexStart;
+  column-gap: 60px;
+}
+
+.tabContainer {
+  width: 160px;
+  height: auto;
+  @include flexColumn;
+  row-gap: 20px;
+  flex-shrink: 0;
+}
+
+.tabButton {
+  display: block;
+  flex-shrink: 0;
+  @include fullSize;
+  @include medium18Inter;
+  font-style: italic;
+  border: 2px solid $black;
+  padding: 6px 10px;
+  color: $black;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &.active {
+    color: $orange;
+    border-color: $orange;
+  }
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .titles {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    @include bold40Playfair;
+  }
+
+  .content {
+    column-gap: 40px;
+  }
+
+  .tabContainer {
+    width: 140px;
+    row-gap: 16px;
+  }
+
+  .tabButton {
+    @include medium16Inter;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 100px;
+  }
+
+  .titles {
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    @include bold24Playfair;
+  }
+
+  .content {
+    @include flexColumn;
+    row-gap: 40px;
+  }
+
+  .tabContainer {
+    width: 100%;
+    @include flexCenter;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  .tabButton {
+    width: 100px;
+    text-align: center;
+  }
+
+  .description {
+    @include regular16Inter;
+  }
+}

@@ -1,0 +1,3 @@
+﻿  Source.cpp
+F:\Study 2 semester\OAIP\LABA_2\LABA_2\Source.cpp(36): warning C4715: recFunction: значение возвращается не при всех путях выполнения
+  LABA_2.vcxproj -> F:\Study 2 semester\OAIP\LABA_2\Debug\LABA_2.exe

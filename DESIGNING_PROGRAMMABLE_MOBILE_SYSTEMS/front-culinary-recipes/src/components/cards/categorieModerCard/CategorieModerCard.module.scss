@@ -1,0 +1,69 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include flexColumn;
+  align-items: center;
+  justify-content: center;
+  row-gap: 12px;
+  width: 100%;
+  position: relative;
+
+  @include hover {
+    .name {
+      color: $grey;
+    }
+
+    .img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.img {
+  @include transition(transform);
+  border-radius: 50%;
+}
+
+.name {
+  @include semibold20Inter;
+  @include transition(color);
+  @include croppingText(2);
+  color: $black;
+  text-align: center;
+}
+
+.btns {
+  position: absolute;
+  top: 20px;
+  right: calc(50% - 84px / 2);
+  display: flex;
+  column-gap: 20px;
+}
+
+.btn {
+  @include sizes(32px, 32px);
+  @include flexCenter;
+  background-color: $white;
+  border-radius: 4px;
+  z-index: 2;
+
+  svg {
+    @include sizes(24px, 24px);
+  }
+}
+
+.count {
+  @include regular14Inter;
+  font-style: italic;
+  color: $orange;
+}
+
+@media (max-width: $mob) {
+  .card {
+    row-gap: 8px;
+  }
+
+  .name {
+    @include semibold14Inter;
+  }
+}

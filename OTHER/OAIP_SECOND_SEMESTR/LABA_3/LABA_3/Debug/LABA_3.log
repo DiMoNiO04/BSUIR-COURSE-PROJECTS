@@ -1,0 +1,3 @@
+﻿  Main.cpp
+F:\Study 2 semester\OAIP\LABA_3\LABA_3\Main.cpp(32,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  LABA_3.vcxproj -> F:\Study 2 semester\OAIP\LABA_3\Debug\LABA_3.exe

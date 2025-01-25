@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "TasteBite",
+    "slug": "TasteBite",
+    "scheme": "TasteBite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/favicon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/loading.gif",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "newArchEnabled": true,
+      "supportsTablet": true
+    },
+    "android": {
+      "newArchEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/favicon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 64px;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .title {
+    @include bold40Playfair;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 100px;
+  }
+
+  .title {
+    @include bold24Playfair;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+}

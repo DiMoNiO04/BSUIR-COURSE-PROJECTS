@@ -1,0 +1,103 @@
+@import '../../../styles/utils/index.scss';
+
+.header {
+  @include transition(background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 100;
+
+  &.scroll {
+    background-color: $whiteDark;
+  }
+}
+
+.container {
+  @include flexCenterBetween;
+  padding: 24px 0;
+}
+
+.logo {
+  @include sizes(160px, 50px);
+}
+
+.panel {
+  @include flexCenterBetween;
+  column-gap: 32px;
+}
+
+.socials {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .header {
+    @include transition(background-color);
+    background-color: $white;
+
+    &.open {
+      background-color: $whiteDark;
+      .content {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .container {
+    padding: 16px 0;
+  }
+
+  .content {
+    @include transition(transform);
+    @include sizes(100%, auto);
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateY(-200%);
+    z-index: 8;
+    overflow: scroll;
+    margin-top: 58px;
+    height: calc(100% - 55px);
+  }
+
+  .socials {
+    @include flexEnd;
+    width: 100%;
+    padding: 0 40px;
+    max-width: 1140px;
+  }
+
+  .logo {
+    @include sizes(90px, 30px);
+    display: block;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .contentContainer {
+    background-color: $whiteDark;
+    padding: 24px 0;
+  }
+
+  .panel {
+    column-gap: 24px;
+  }
+}
+
+@media (max-width: $mob) {
+  .socials {
+    padding: 0;
+  }
+
+  .contentContainer {
+    padding: 24px 16px;
+  }
+
+  .panel {
+    column-gap: 20px;
+  }
+}

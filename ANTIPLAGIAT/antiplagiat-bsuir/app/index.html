@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>АНТИПЛАГИАТ БГУИР</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+  <body class="index">
+    <main>
+      <div class="base">
+        <h1>АНТИПЛАГИАТ БГУИР</h1>
+        <h2>Страницы:</h2>
+        <ol>
+          <li>
+            <a href="./main.html" target="_blank"> Главная страница (Вход) </a>
+          </li>
+          <li>
+            <a href="./cab.html" target="_blank"> Кабинет </a>
+          </li>
+          <li>
+            <a href="./pers-cab.html" target="_blank"> Личный кабинет </a>
+          </li>
+          <li>
+            <a href="./role-cab.html" target="_blank"> Роль пользователя </a>
+          </li>
+          <li>
+            <a href="./results-cab.html" target="_blank"> Результаты </a>
+          </li>
+          <li>
+            <a href="./file.html" target="_blank"> File PDF </a>
+          </li>
+        </ol>
+
+        <h2>Модальные окна:</h2>
+        <ol>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-doc">Отправить документ на защиту</button>
+          </li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-load">Загрузка на проверку</button>
+          </li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-protection">Отправить документ на защиту</button>
+          </li>
+        </ol>
+      </div>
+    </main>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container modal-doc" role="dialog" aria-modal="true" data-graph-target="modal-doc">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Оценить документ</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы вынести окончательное решение о данном документе?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>ФИО</div>
+          <div class="js-modal-doc-name"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-sec js-modal-close js-result-no-success">
+          <span>Отправить на доработку</span>
+        </button>
+        <button type="button" class="modal-doc__btn btn-def js-modal-close js-result-success">
+          <span>Зачтен</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-load" role="dialog" aria-modal="true" data-graph-target="modal-load">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-load__container">
+      <h2 class="modal-load__title">Загрузка документа</h2>
+      <form class="modal-load__form" id="modal-doc-form">
+        <div class="modal-load__input input">
+          <label class="input__label" for="name">Название работы <span>*</span></label>
+          <input autocomplete="off" class="input__input" type="text" placeholder="Название работы" name="name" />
+          <div class="input__btn-notify js-notify" data-notify="Менее 8 символов">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#input-error"></use>
+            </svg>
+          </div>
+          <div class="input__error">Некорректное название работы!</div>
+        </div>
+        <div class="modal-load__dropdown dropdown js-dropdown">
+          <div class="dropdown__headline">Тип работы <span>*</span></div>
+          <div class="dropdown__header js-dropdown-inner">
+            <div class="dropdown__value js-dropdown-value">Тип работы</div>
+            <button type="button" class="dropdown__btn">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown__content">
+            <div class="dropdown__items" data-simplebar>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-1" type="radio" name="item" value="item-1" />
+                <label for="item-1">Item-1</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-2" type="radio" name="item" value="item-2" />
+                <label for="item-2">Item-2</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-3" type="radio" name="item" value="item-3" />
+                <label for="item-3">Item-3</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-4" type="radio" name="item" value="item-4" />
+                <label for="item-4">Item-4</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-5" type="radio" name="item" value="item-5" />
+                <label for="item-5">Item-5</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-6" type="radio" name="item" value="item-6" />
+                <label for="item-6">Item-6</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-load__drag-area drag-area">
+          <div class="drag-area__form">
+            <button class="drag-area__btn btn btn-def" type="button">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#paper"></use>
+              </svg>
+              Загрузить документ
+            </button>
+            <p class="drag-area__up">ИЛИ ПЕРЕТАЩИТЕ ФАЙЛЫ СЮДА</p>
+            <p class="drag-area__sm">
+              Допустимый формат документа: *pdf <br />
+              Максимальный размер: 10 МБ
+            </p>
+            <input type="file" hidden name="file" accept="application/pdf" />
+          </div>
+          <div class="drag-area__files"></div>
+        </div>
+        <button class="modal-load__btn btn btn-def" type="submit" form="modal-doc-form">Проверить</button>
+      </form>
+    </div>
+  </div>
+  <div
+    class="graph-modal__container modal-doc modal-protection"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-protection"
+  >
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Отправить документ на защиту</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы отправить документ на защиту необратима?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-def js-modal-close">
+          <span>Отправить</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="./js/main.js"></script>
+
+  </body>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    .index body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      min-width: 40rem;
+      background: linear-gradient(90.31deg, #7794d3 -26.48%, #5c72a2 58.31%, #7794d3 126.04%);
+      color: blue;
+    }
+
+    .index body {
+      padding: 2rem 0;
+      font-size: 100%;
+      line-height: 1;
+      font-size: 4rem;
+      letter-spacing: 0.3rem;
+      user-select: none;
+    }
+
+    .base ul,
+    .base ol {
+      margin-bottom: 12rem;
+    }
+
+    .base ul li,
+    .base ol li {
+      font-size: 2rem;
+      list-style: none;
+    }
+
+    .base ol {
+      counter-reset: list;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .base ol > li:before {
+      content: '(' counter(list) ') ';
+      counter-increment: list;
+    }
+
+    .base li {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .base a,
+    .base button {
+      text-decoration: none;
+    }
+
+    .base a,
+    .base button {
+      color: #3b547f;
+      transition: color 0.5s ease;
+    }
+
+    .base a:hover,
+    .base button:hover {
+      text-decoration: none;
+      color: #5f75a7;
+    }
+
+    .base a:hover::before,
+    .base button:hover::before {
+      color: #5f75a7;
+    }
+
+    .base h1 {
+      margin-bottom: 6rem;
+      font-size: 6rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .base h2 {
+      margin-bottom: 2.5rem;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+
+    .base h3 {
+      margin-bottom: 1.8rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    .base {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 48em) {
+      html {
+        font-size: 1.5625vw;
+      }
+    }
+  </style>
+</html>

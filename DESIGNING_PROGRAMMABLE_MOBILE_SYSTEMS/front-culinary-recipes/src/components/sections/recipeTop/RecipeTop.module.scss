@@ -1,0 +1,176 @@
+@import '../../../styles/utils/index.scss';
+
+.panel {
+  @include flexStartBetween;
+  margin-bottom: 8px;
+  column-gap: 32px;
+}
+
+.panelBnts {
+  @include flexCenterBetween;
+  column-gap: 32px;
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+.btnLike {
+  @include sizes(32px, 32px);
+  flex-shrink: 0;
+}
+
+.title {
+  @include bold60Playfair;
+  margin-bottom: 24px;
+}
+
+.desc {
+  @include flexCenterStart;
+  column-gap: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 24px;
+}
+
+.author,
+.calendar {
+  @include flexCenterStart;
+  column-gap: 6px;
+
+  span {
+    @include regular14Inter;
+    color: $black;
+  }
+}
+
+.author {
+  img {
+    @include sizes(32px, 32px);
+  }
+}
+
+.calendar {
+  img {
+    @include sizes(16px, 16px);
+  }
+}
+
+.description {
+  @include regular18Inter;
+  max-width: 820px;
+  color: $black;
+}
+
+.img {
+  margin: 40px 0 60px;
+  @include sizes(100%, 500px);
+
+  img {
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}
+
+.category {
+  b {
+    @include regular14Inter;
+    color: $black;
+  }
+
+  a {
+    margin-left: 6px;
+    @include regular18Inter;
+    color: $grey;
+    @include transition(color);
+
+    @include hover {
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .panelBnts {
+    column-gap: 34px;
+  }
+
+  .btnLike {
+    @include sizes(24px, 24px);
+  }
+
+  .title {
+    @include bold40Playfair;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    @include flexCenterStart;
+    column-gap: 24px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .author {
+    img {
+      @include sizes(24px, 24px);
+    }
+  }
+
+  .description {
+    @include regular16Inter;
+  }
+
+  .img {
+    margin: 32px 0 48px;
+    height: 380px;
+  }
+}
+
+@media (max-width: $mob) {
+  .panelBnts {
+    column-gap: 16px;
+  }
+
+  .btnLike {
+    @include sizes(16px, 16px);
+  }
+
+  .title {
+    @include bold30Playfair;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .author,
+  .calendar {
+    column-gap: 4px;
+
+    span {
+      @include regular12Inter;
+    }
+  }
+
+  .category {
+    b {
+      @include regular12Inter;
+    }
+
+    a {
+      @include regular16Inter;
+    }
+  }
+
+  .description {
+    @include regular14Inter;
+  }
+
+  .img {
+    margin: 24px 0 16px;
+    @include sizes(100%, 280px);
+  }
+}

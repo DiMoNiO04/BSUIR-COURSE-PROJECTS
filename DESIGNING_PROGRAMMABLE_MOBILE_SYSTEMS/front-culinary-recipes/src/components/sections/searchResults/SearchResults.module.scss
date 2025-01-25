@@ -1,0 +1,81 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  margin-bottom: 64px;
+}
+
+.block {
+  @include flexCenterBetween;
+  margin-bottom: 48px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $black;
+  column-gap: 48px;
+
+  input {
+    @include regular18Inter;
+    color: $black;
+    border: none;
+    background-color: transparent;
+    flex-shrink: 0;
+  }
+
+  span {
+    @include regular16Inter;
+    flex-shrink: 0;
+  }
+}
+
+.sortContainer {
+  @include flexCenterBetween;
+  column-gap: 32px;
+  flex-shrink: 0;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .title {
+    @include bold40Playfair;
+    margin-bottom: 40px;
+  }
+
+  .block {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 96px;
+  }
+
+  .title {
+    @include bold30Playfair;
+    margin-bottom: 24px;
+  }
+
+  .block {
+    flex-wrap: 0;
+    margin-bottom: 24px;
+    row-gap: 12px;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sortContainer {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

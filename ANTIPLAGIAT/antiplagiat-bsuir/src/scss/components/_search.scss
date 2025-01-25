@@ -1,0 +1,104 @@
+.search {
+  position: relative;
+  width: 544px;
+
+  &__input {
+    background-color: $blue50;
+    border-radius: 10px;
+    padding: 10px 42px;
+    @include flexCenterBetween;
+    cursor: pointer;
+    border: 1px solid transparent;
+    @include transition(border-color);
+    color: $blue400;
+    @include regular14;
+    width: 100%;
+
+    &::placeholder {
+      color: $grey200;
+    }
+
+    &:focus {
+      border-color: $blue400;
+    }
+
+    &:focus ~ .search__btn svg {
+      stroke: $blue400;
+    }
+  }
+
+  &__btn-submit {
+    left: 15px;
+  }
+
+  &__btn-reset {
+    right: 15px;
+    @include hidden;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+
+    &.--active {
+      @include visible;
+    }
+
+    svg {
+      stroke-width: 2;
+    }
+  }
+
+  &__btn-reset,
+  &__btn-submit {
+    @include sizes(24px, 24px);
+    position: absolute;
+    top: calc(50% - 12px);
+
+    @include hover {
+      svg {
+        stroke: $blue400;
+      }
+    }
+
+    svg {
+      stroke-width: 1.5;
+      stroke: $grey200;
+      fill: none;
+      @include transition(stroke);
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .search {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .search {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .search {
+    &__btn-reset,
+    &__btn-submit {
+      @include sizes(18px, 18px);
+      top: calc(50% - 9px);
+    }
+
+    &__btn-submit {
+      left: 10px;
+    }
+
+    &__btn-reset {
+      right: 10px;
+    }
+
+    &__input {
+      border-radius: 4px;
+      padding: 5px 32px;
+    }
+  }
+}

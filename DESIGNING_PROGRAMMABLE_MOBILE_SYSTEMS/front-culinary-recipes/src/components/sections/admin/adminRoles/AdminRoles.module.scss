@@ -1,0 +1,24 @@
+@import '../../../../styles/utils/index.scss';
+
+.title {
+  margin: 0;
+  @include flexCenterBetween;
+  column-gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 64px;
+}
+
+@media (max-width: $tablet) {
+  .title {
+    column-gap: 30px;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $mob) {
+  .title {
+    margin-bottom: 32px;
+  }
+}

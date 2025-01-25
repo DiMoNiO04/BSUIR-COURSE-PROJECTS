@@ -1,0 +1,86 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  @include fullSize;
+  min-height: calc(100vh - 445px - 100px);
+}
+
+.container {
+  @include flexCenter;
+  @include fullSize;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-top: 160px;
+}
+
+.title {
+  color: $orange;
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1px;
+  text-align: center;
+  margin: 0;
+}
+
+.text {
+  @include regular24Inter;
+  color: $black;
+  text-align: center;
+}
+
+.btns {
+  @include flexCenter;
+  column-gap: 40px;
+
+  a,
+  button {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: $tablet) {
+  .section {
+    min-height: calc(100vh - 565px - 65px);
+  }
+
+  .container {
+    row-gap: 32px;
+    margin-top: 120px;
+  }
+
+  .title {
+    font-size: 86px;
+  }
+
+  .text {
+    @include regular18Inter;
+  }
+
+  .btns {
+    column-gap: 32px;
+  }
+}
+
+@media (max-width: $mob) {
+  .container {
+    row-gap: 24px;
+    margin-top: 100px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .text {
+    @include regular16Inter;
+  }
+
+  .btns {
+    flex-direction: column;
+    row-gap: 12px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,234 @@
+.file {
+  @include flexColumn;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 4.4mm 3.6mm 3.3mm 11.6mm;
+
+  &-body {
+    background-color: #fff;
+  }
+
+  &__bottom {
+    margin-top: auto;
+  }
+
+  &__logo {
+    margin-bottom: 12.7mm;
+  }
+
+  &__title-block {
+    margin-bottom: 10.6mm;
+  }
+
+  &__title-h1 {
+    font-size: 5.08mm;
+    line-height: 6.6mm;
+    color: #03102c;
+    font-weight: 700;
+  }
+
+  &__title-text {
+    color: #646464;
+    font-size: 3.048mm;
+    line-height: 3.9624mm;
+    font-weight: 500;
+  }
+
+  &__info {
+    margin-bottom: 17mm;
+  }
+
+  &__qr-blocks {
+    @include flexCenterBetween;
+    column-gap: 12mm;
+  }
+
+  &__qr-block {
+    @include flexCenter;
+    column-gap: 2.54mm;
+  }
+
+  &__qr-block-img {
+    @include sizes(31mm, 31mm);
+    flex-shrink: 0;
+
+    img {
+      @include fullSize;
+      object-fit: contain;
+    }
+  }
+
+  &__qr-block-txt {
+    color: #646464;
+    font-weight: 500;
+    font-size: 2.7mm;
+    line-height: 3.5mm;
+    text-wrap: balance;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    column-gap: 2.54mm;
+  }
+
+  &__bottom-icon {
+    @include sizes(8.5mm, 8.5mm);
+
+    img {
+      @include fullSize;
+    }
+  }
+
+  &__bottom-txt {
+    color: #646464;
+    font-weight: 500;
+    font-size: 2.7mm;
+    line-height: 3.5mm;
+  }
+}
+
+.info {
+  &-block {
+    display: inline-flex;
+
+    &__title {
+      font-weight: 600;
+      flex-shrink: 0;
+      color: #03102c;
+      font-size: 2.7mm;
+      line-height: 3.5mm;
+      margin-bottom: 0.5mm;
+      width: 32mm;
+      padding-right: 3.3mm;
+    }
+
+    &__value {
+      color: #646464;
+      font-weight: 500;
+      font-size: 2.7mm;
+      line-height: 3.5mm;
+    }
+  }
+
+  &__title {
+    color: #03102c;
+    font-weight: 600;
+    font-size: 3.048mm;
+    line-height: 3.96mm;
+    margin-bottom: 2.54mm;
+  }
+
+  &__items {
+    @include flexColumn;
+    row-gap: 0.85mm;
+  }
+
+  &__tutor {
+    @include flexColumn;
+    row-gap: 17mm;
+    margin-top: 8.5mm;
+  }
+
+  &__signatures {
+    @include flexCenterStart;
+    column-gap: 12mm;
+  }
+
+  &__results-items {
+    @include flexColumn;
+    row-gap: 0.85mm;
+  }
+
+  &__results-item {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 3.4mm;
+  }
+
+  &__results-title {
+    color: #646464;
+    font-weight: 500;
+    font-size: 2.7mm;
+    line-height: 3.5mm;
+    width: 24.5mm;
+  }
+
+  &__results-percent {
+    color: #03102c;
+    font-weight: 500;
+    font-size: 2.7mm;
+    line-height: 3.5mm;
+  }
+
+  &__results-bar {
+    position: relative;
+    margin: auto;
+
+    &--sov {
+      div {
+        &:last-child {
+          border-bottom: 0.8mm solid #ff6b00;
+        }
+      }
+    }
+
+    &--orig {
+      div {
+        &:last-child {
+          border-bottom: 0.8mm solid #3b547f;
+        }
+      }
+    }
+
+    div {
+      border-radius: 0.8mm;
+
+      &:first-child {
+        width: 51mm;
+        border-bottom: 0.8mm solid #ebf1ff;
+      }
+
+      &:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media print {
+  .info__results-bar div {
+    background-color: #ebf1ff !important;
+  }
+
+  .info__results-bar--sov div:last-child {
+    background-color: #ff6b00 !important;
+  }
+
+  .info__results-bar--orig div:last-child {
+    background-color: #3b547f !important;
+  }
+}
+
+.border {
+  border-bottom: 0.8mm solid #ebf1ff;
+  width: 100%;
+  border-radius: 1mm;
+  margin: 4.2mm 0;
+
+  &--first {
+    margin-top: 0;
+  }
+}
+
+.underline {
+  border-bottom: 0.0001mm solid #646464;
+  display: inline-block;
+  width: fit-content;
+  hyphens: auto;
+  vertical-align: bottom;
+  width: 100%;
+}

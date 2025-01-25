@@ -1,0 +1,40 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.info {
+  @include flexColumn;
+  row-gap: 40px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  column-gap: 100px;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .info {
+    row-gap: 32px;
+  }
+
+  .content {
+    column-gap: 50px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 96px;
+  }
+  .content {
+    @include grid(1);
+    row-gap: 32px;
+  }
+}

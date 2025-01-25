@@ -1,0 +1,21 @@
+@import '../../../styles/utils/index.scss';
+
+.cards {
+  @include grid(3);
+  grid-gap: 30px;
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: $tablet) {
+  .cards {
+    @include grid(2);
+  }
+}
+
+@media (max-width: $mob) {
+  .cards {
+    @include grid(1);
+    grid-auto-rows: 1fr;
+    grid-gap: 24px;
+  }
+}

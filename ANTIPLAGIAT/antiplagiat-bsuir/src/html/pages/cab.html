@@ -1,0 +1,386 @@
+<main>
+  <section class="cab cab--cab">
+    <div class="container">
+      <div class="cab__container">
+        <div class="cab__titles">
+          <h1 class="cab__titles-title title">Кабинет</h1>
+          <div class="cab__titles-left">
+            <div class="cab__search">
+              <form action="" id="search" class="cab__search-form search">
+                <input autocomplete="off" type="text" class="search__input" placeholder="Поиск по названию документа" />
+                <button type="submit" form="search" class="search__btn-submit">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <button type="reset" form="search" class="search__btn-reset">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#reset"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <button class="cab__btn btn btn-def" type="button" data-graph-path="modal-load">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#paper"></use>
+              </svg>
+              Проверить документ
+            </button>
+          </div>
+        </div>
+        <div class="cab__block">
+          <div class="cab__header">
+            <div class="cab__header-item">
+              <div class="cab__header-name">Название</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Статус</div>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Время</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Оригинальность</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cab__content">
+            <!--Если документов нету-->
+            <div class="cab__content-none">Документы отсутствуют</div>
+
+            <!--Если документы есть-->
+            <div class="cab__items">
+              <div class="cab__item --queue">
+                <div class="cab__item-block">
+                  <div></div>
+                  <div class="js-modal-doc-file js-notify-tippy">
+                    Отличительным аспектом статьи является её готовность.
+                  </div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Статус</div>
+                  <div class="cab__item-status">206111 в очереди</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Дата</div>
+                  <div>03.03.2024 21:46:13</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Оригинальность</div>
+                  <div class="js-modal-doc-orig">—</div>
+                </div>
+                <div class="cab-results__more more-btns">
+                  <button type="button" class="more-btns__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#more"></use>
+                    </svg>
+                  </button>
+                  <div class="more-btns__content">
+                    <button type="button" class="more-btns__link">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                        </svg>
+                      </div>
+                      <span>Результаты</span>
+                    </button>
+                    <button type="button" class="more-btns__link" data-graph-path="modal-protection">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload-active"></use>
+                        </svg>
+                      </div>
+                      <span>Отправить на проверку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cab__item --verified">
+                <div class="cab__item-block">
+                  <div></div>
+                  <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Статус</div>
+                  <div class="cab__item-status">Проверен</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Дата</div>
+                  <div>02.06.2023 12:24:56</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Оригинальность</div>
+                  <div class="js-modal-doc-orig">87%</div>
+                </div>
+                <div class="cab-results__more more-btns">
+                  <button type="button" class="more-btns__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#more"></use>
+                    </svg>
+                  </button>
+                  <div class="more-btns__content">
+                    <button disabled type="button" class="more-btns__link">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                        </svg>
+                      </div>
+                      <span>Результаты</span>
+                    </button>
+                    <button disabled type="button" class="more-btns__link" data-graph-path="modal-protection">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload-active"></use>
+                        </svg>
+                      </div>
+                      <span>Отправить на проверку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cab__item --notCredited">
+                <div class="cab__item-block">
+                  <div></div>
+                  <div class="js-modal-doc-file js-notify-tippy">
+                    Отличительным аспектом статьи является её готовность. Отличительным аспектом статьи является её
+                    готовность. Отличительным аспектом статьи является её готовность.
+                  </div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Статус</div>
+                  <div class="cab__item-status">Не зачтен</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Дата</div>
+                  <div>13.10.2024 20:43:13</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Оригинальность</div>
+                  <div class="js-modal-doc-orig">91%</div>
+                </div>
+                <div class="cab-results__more more-btns">
+                  <button type="button" class="more-btns__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#more"></use>
+                    </svg>
+                  </button>
+                  <div class="more-btns__content">
+                    <button disabled type="button" class="more-btns__link">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                        </svg>
+                      </div>
+                      <span>Результаты</span>
+                    </button>
+                    <button disabled type="button" class="more-btns__link" data-graph-path="modal-protection">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload-active"></use>
+                        </svg>
+                      </div>
+                      <span>Отправить на проверку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cab__item --defense">
+                <div class="cab__item-block">
+                  <div></div>
+                  <div class="js-modal-doc-file js-notify-tippy">
+                    Отличительным аспектом статьи является её готовность является её готовность
+                  </div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Статус</div>
+                  <div class="cab__item-status">В защите</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Дата</div>
+                  <div>03.10.2024 21:46:13</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Оригинальность</div>
+                  <div class="js-modal-doc-orig">83%</div>
+                </div>
+                <div class="cab-results__more more-btns">
+                  <button type="button" class="more-btns__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#more"></use>
+                    </svg>
+                  </button>
+                  <div class="more-btns__content">
+                    <button disabled type="button" class="more-btns__link">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                        </svg>
+                      </div>
+                      <span>Результаты</span>
+                    </button>
+                    <button disabled type="button" class="more-btns__link" data-graph-path="modal-protection">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload-active"></use>
+                        </svg>
+                      </div>
+                      <span>Отправить на проверку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cab__item --passed">
+                <div class="cab__item-block">
+                  <div></div>
+                  <div class="js-modal-doc-file js-notify-tippy">
+                    Отличительным аспектом статьи является её готовность.
+                  </div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Статус</div>
+                  <div class="cab__item-status">Зачтен</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Дата</div>
+                  <div>03.10.2024 21:46:13</div>
+                </div>
+                <div class="cab__item-block">
+                  <div>Оригинальность</div>
+                  <div class="js-modal-doc-orig">100%</div>
+                </div>
+                <div class="cab-results__more more-btns">
+                  <button type="button" class="more-btns__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#more"></use>
+                    </svg>
+                  </button>
+                  <div class="more-btns__content">
+                    <button disabled type="button" class="more-btns__link">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                        </svg>
+                      </div>
+                      <span>Результаты</span>
+                    </button>
+                    <button disabled type="button" class="more-btns__link" data-graph-path="modal-protection">
+                      <div class="more-btns__link-icon">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#paper-upload-active"></use>
+                        </svg>
+                      </div>
+                      <span>Отправить на проверку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cab__desc">
+            <div class="cab__desc-content">
+              <div class="cab__desc-notify">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#input-error"></use>
+                </svg>
+                <p>
+                  Загруженные материалы хранятся в кабинете 7 дней, после чего, за исключением отправленных на защиту,
+                  удаляются!
+                </p>
+              </div>
+              <div class="cab__desc-infos">
+                <div class="cab__desc-pagination pagination">
+                  <button type="button" class="pagination__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 2.75024C6.892 2.75024 2.75 6.89124 2.75 12.0002C2.75 17.1082 6.892 21.2502 12 21.2502C17.108 21.2502 21.25 17.1082 21.25 12.0002C21.25 6.89124 17.108 2.75024 12 2.75024Z"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.4424 8.52905L9.95638 12.0001L13.4424 15.4711"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="pagination__info">1-10 из 276</div>
+                  <button type="button" class="pagination__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 21.2498C17.108 21.2498 21.25 17.1088 21.25 11.9998C21.25 6.89179 17.108 2.74979 12 2.74979C6.892 2.74979 2.75 6.89179 2.75 11.9998C2.75 17.1088 6.892 21.2498 12 21.2498Z"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.5576 15.471L14.0436 12L10.5576 8.52898"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @include('../templates/btnUp.html')
+</main>

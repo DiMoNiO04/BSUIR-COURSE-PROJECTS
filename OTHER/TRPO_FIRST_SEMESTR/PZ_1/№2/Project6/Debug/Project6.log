@@ -1,0 +1,2 @@
+﻿Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl sha256(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?sha256@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@Z) в функции _main.
+C:\Users\37529\Documents\GitHub\TRPO\TRPO_PZ_1\№2\Debug\Project6.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

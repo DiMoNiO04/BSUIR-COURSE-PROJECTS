@@ -1,0 +1,113 @@
+@import '../../../styles/utils/index.scss';
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  @include sizes(100%, 634px);
+  position: relative;
+}
+
+.img {
+  @include fullSize;
+  object-fit: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    @include fullSize;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 38.05%, rgba(0, 0, 0, 0.5) 100%);
+  }
+}
+
+.btns {
+  @include flexCenterBetween;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.info {
+  position: absolute;
+  max-width: 1140px;
+  padding: 0 40px;
+  margin: 0 auto;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.description {
+  @include flexStart;
+  column-gap: 8px;
+  max-width: 674px;
+  margin-bottom: 2px;
+
+  img {
+    @include sizes(20px, 20px);
+  }
+
+  span {
+    @include medium16Inter;
+    color: $white;
+  }
+}
+
+.title {
+  @include bold76Playfair;
+  color: $white;
+  max-width: 674px;
+  margin: 0;
+}
+
+@media (max-width: $tablet) {
+  .info {
+    padding: 0 80px;
+    bottom: 48px;
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 62px;
+  }
+
+  .btns {
+    display: none;
+  }
+
+  .slide {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .description {
+    img {
+      @include sizes(16px, 16px);
+    }
+
+    span {
+      @include regular12Inter;
+    }
+  }
+
+  .info {
+    bottom: 32px;
+    padding: 0 32px;
+  }
+
+  .title {
+    @include bold30Playfair;
+    margin: 0;
+    max-width: 280px;
+  }
+}

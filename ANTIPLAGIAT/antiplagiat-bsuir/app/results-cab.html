@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Результаты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="./cab.html" class="header__logo logo">
+        <img src="./assets/img/logo.svg" alt="БГУИР" />
+      </a>
+      <div class="header__menus js-menus">
+        <div class="header__btn js-menu-btn">
+          <div class="header__btn-icon">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#profile"></use>
+            </svg>
+          </div>
+          <div class="header__btn-arrow">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#header-btn"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="header__menu js-menu">
+          <a href="./cab.html" class="header__menu-item">
+            <div class="header__menu-icon">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-cab"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-cab-active"></use>
+              </svg>
+            </div>
+            <span>Кабинет</span>
+          </a>
+          <a href="./pers-cab.html" class="header__menu-item">
+            <div class="header__menu-icon">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-user"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-user-active"></use>
+              </svg>
+            </div>
+            <span>Личный кабинет</span>
+          </a>
+          <a href="./results-cab.html" class="header__menu-item">
+            <div class="header__menu-icon">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-result"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-result-active"></use>
+              </svg>
+            </div>
+            <span>Результаты</span>
+          </a>
+          <a href="./role-cab.html" class="header__menu-item">
+            <div class="header__menu-icon">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-role"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-role-active"></use>
+              </svg>
+            </div>
+            <span>Роль пользователя</span>
+          </a>
+          <a href="./main.html" class="header__menu-item">
+            <div class="header__menu-icon">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-exit"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#menu-exit-active"></use>
+              </svg>
+            </div>
+            <span>Выйти</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <main>
+  <section class="cab cab--results">
+    <div class="container">
+      <div class="cab__container">
+        <div class="cab__titles">
+          <h1 class="cab__titles-title title">Результаты</h1>
+          <div class="cab__titles-left">
+            <div class="cab__search">
+              <form action="" id="search" class="cab__search-form search">
+                <input autocomplete="off" type="text" class="search__input" placeholder="Поиск по ФИО" />
+                <button type="submit" form="search" class="search__btn-submit">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <button type="reset" form="search" class="search__btn-reset">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#reset"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="cab__block">
+          <div class="cab__header">
+            <div class="cab__header-item">
+              <div class="cab__header-name">№</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">ФИО</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Дата</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Оригинальность</div>
+              <button type="button" class="cab__header-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#table-btn"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Название</div>
+            </div>
+            <div class="cab__header-item">
+              <div class="cab__header-name">Статус</div>
+            </div>
+          </div>
+          <div class="cab__content cab-results">
+            <div class="cab-results__content">
+              <!--Если документов нету-->
+              <div class="cab__content-none">Результаты отсутствуют</div>
+
+              <!--Если документы есть-->
+              <div class="cab-results__blocks">
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>1</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Ташлыкова-Бушкевич Полина Александровна</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>03.03.2024 21:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">
+                      Отличительным аспектом статьи является её готовность. Если подготавливаемый материал
+                    </div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>2</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>3</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>4</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Ташлыкова-Бушкевич Полина Александровна</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>03.03.2024 21:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">
+                      Отличительным аспектом статьи является её готовность.
+                    </div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>5</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>6</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Ташлыкова-Бушкевич Полина Александровна</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>03.03.2024 21:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Отличительным аспектом статьи</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>7</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>8</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>9</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Ташлыкова-Бушкевич Полина Александровна</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>03.03.2024 21:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">
+                      Отличительным аспектом статьи является её готовность. Если подготавливаемый материал
+                    </div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cab-results__block">
+                  <div class="cab-results__block-item">
+                    <div>№</div>
+                    <div>10</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>ФИО</div>
+                    <div class="js-modal-doc-name">Разумов Дмитрий Александрович</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Дата</div>
+                    <div>02.06.2024 05:46:13</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Оригинальность</div>
+                    <div class="js-modal-doc-orig">100%</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Название</div>
+                    <div class="js-modal-doc-file js-notify-tippy">Пояснительная записка курсовой работы</div>
+                  </div>
+                  <div class="cab-results__block-item">
+                    <div>Статус</div>
+                    <div class="cab-results__result">
+                      <p>—</p>
+                      <svg class="success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-success"></use>
+                      </svg>
+                      <svg class="no-success-icon">
+                        <use xlink:href="assets/img/sprite.svg#result-error"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cab-results__more more-btns">
+                    <button type="button" class="more-btns__btn">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#more"></use>
+                      </svg>
+                    </button>
+                    <div class="more-btns__content">
+                      <button type="button" class="more-btns__link">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-result-active"></use>
+                          </svg>
+                        </div>
+                        <span>Результаты</span>
+                      </button>
+                      <button type="button" class="more-btns__link" data-graph-path="modal-doc">
+                        <div class="more-btns__link-icon">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#results-star-active"></use>
+                          </svg>
+                        </div>
+                        <span>Оценить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cab__desc">
+            <div class="cab__desc-content">
+              <div class="cab__desc-infos">
+                <div class="cab__desc-pagination pagination">
+                  <button type="button" class="pagination__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 2.75024C6.892 2.75024 2.75 6.89124 2.75 12.0002C2.75 17.1082 6.892 21.2502 12 21.2502C17.108 21.2502 21.25 17.1082 21.25 12.0002C21.25 6.89124 17.108 2.75024 12 2.75024Z"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.4424 8.52905L9.95638 12.0001L13.4424 15.4711"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="pagination__info">1-10 из 276</div>
+                  <button type="button" class="pagination__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 21.2498C17.108 21.2498 21.25 17.1088 21.25 11.9998C21.25 6.89179 17.108 2.74979 12 2.74979C6.892 2.74979 2.75 6.89179 2.75 11.9998C2.75 17.1088 6.892 21.2498 12 21.2498Z"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.5576 15.471L14.0436 12L10.5576 8.52898"
+                        stroke="#696F79"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button type="button" class="btn-up js-btn-up">
+  <svg>
+    <use xlink:href="assets/img/sprite.svg#header-btn"></use>
+  </svg>
+</button>
+
+</main>
+
+    <footer class="footer"></footer>
+ <div class="graph-modal">
+  <div class="graph-modal__container modal-doc" role="dialog" aria-modal="true" data-graph-target="modal-doc">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Оценить документ</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы вынести окончательное решение о данном документе?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>ФИО</div>
+          <div class="js-modal-doc-name"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-sec js-modal-close js-result-no-success">
+          <span>Отправить на доработку</span>
+        </button>
+        <button type="button" class="modal-doc__btn btn-def js-modal-close js-result-success">
+          <span>Зачтен</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-load" role="dialog" aria-modal="true" data-graph-target="modal-load">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-load__container">
+      <h2 class="modal-load__title">Загрузка документа</h2>
+      <form class="modal-load__form" id="modal-doc-form">
+        <div class="modal-load__input input">
+          <label class="input__label" for="name">Название работы <span>*</span></label>
+          <input autocomplete="off" class="input__input" type="text" placeholder="Название работы" name="name" />
+          <div class="input__btn-notify js-notify" data-notify="Менее 8 символов">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#input-error"></use>
+            </svg>
+          </div>
+          <div class="input__error">Некорректное название работы!</div>
+        </div>
+        <div class="modal-load__dropdown dropdown js-dropdown">
+          <div class="dropdown__headline">Тип работы <span>*</span></div>
+          <div class="dropdown__header js-dropdown-inner">
+            <div class="dropdown__value js-dropdown-value">Тип работы</div>
+            <button type="button" class="dropdown__btn">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown__content">
+            <div class="dropdown__items" data-simplebar>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-1" type="radio" name="item" value="item-1" />
+                <label for="item-1">Item-1</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-2" type="radio" name="item" value="item-2" />
+                <label for="item-2">Item-2</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-3" type="radio" name="item" value="item-3" />
+                <label for="item-3">Item-3</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-4" type="radio" name="item" value="item-4" />
+                <label for="item-4">Item-4</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-5" type="radio" name="item" value="item-5" />
+                <label for="item-5">Item-5</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-6" type="radio" name="item" value="item-6" />
+                <label for="item-6">Item-6</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-load__drag-area drag-area">
+          <div class="drag-area__form">
+            <button class="drag-area__btn btn btn-def" type="button">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#paper"></use>
+              </svg>
+              Загрузить документ
+            </button>
+            <p class="drag-area__up">ИЛИ ПЕРЕТАЩИТЕ ФАЙЛЫ СЮДА</p>
+            <p class="drag-area__sm">
+              Допустимый формат документа: *pdf <br />
+              Максимальный размер: 10 МБ
+            </p>
+            <input type="file" hidden name="file" accept="application/pdf" />
+          </div>
+          <div class="drag-area__files"></div>
+        </div>
+        <button class="modal-load__btn btn btn-def" type="submit" form="modal-doc-form">Проверить</button>
+      </form>
+    </div>
+  </div>
+  <div
+    class="graph-modal__container modal-doc modal-protection"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-protection"
+  >
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Отправить документ на защиту</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы отправить документ на защиту необратима?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-def js-modal-close">
+          <span>Отправить</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="./js/main.js"></script>
+
+  </body>
+</html>

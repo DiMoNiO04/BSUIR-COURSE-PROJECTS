@@ -1,0 +1,83 @@
+.btn {
+  border-radius: 8px;
+  @include flexCenter;
+  column-gap: 5px;
+  padding: 8px 0;
+  flex-shrink: 0;
+  @include regular16;
+
+  img {
+    @include sizes(24px, 24px);
+  }
+}
+
+.btn-def {
+  color: $white;
+  background-color: $blue400;
+  transition: all 0.2s ease;
+  @include sizes(260px, 40px);
+
+  svg {
+    @include sizes(25px, 25px);
+    fill: #fff;
+  }
+
+  @include hover {
+    background-color: $blue300;
+  }
+}
+
+.btn-sec {
+  color: $blue400;
+  background-color: transparent;
+  @include sizes(280px, 40px);
+  border: 1px solid $blue400;
+  transition: all 0.2s ease;
+
+  @include hover {
+    background-color: $blue300;
+    border-color: $blue300;
+    color: $white;
+  }
+}
+
+.btn-up {
+  @include sizes(40px, 40px);
+  @include flexCenter;
+  background-color: $blue300;
+  border-radius: 50%;
+  @include transition(background-color);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+
+  svg {
+    fill: $white;
+    @include sizes(28px, 28px);
+    transform: rotate(180deg);
+  }
+
+  @include hover {
+    background-color: $blue400;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .btn {
+    border-radius: 4px;
+  }
+
+  .btn-def,
+  .btn-sec {
+    height: 32px;
+
+    svg {
+      @include sizes(18px, 18px);
+    }
+  }
+
+  .btn-up {
+    display: flex;
+  }
+}

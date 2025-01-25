@@ -1,0 +1,214 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-animation: bugfix infinite 1s;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scrollbar-gutter: auto;
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: $laptop) {
+  .disable-scroll {
+    top: 0 !important;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $blue400;
+  margin: 0;
+  padding: 0;
+  background: $blue200;
+  overflow-x: hidden;
+  @include flexColumn;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  &.ov-hidden {
+    overflow: hidden;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  @include transition(color);
+  text-decoration: none;
+
+  @include hover {
+    color: $blue300;
+  }
+}
+
+input,
+textarea {
+  -webkit-animation: bugfix infinite 1s;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: unset;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button,
+input,
+a,
+textarea {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  @include fullSize();
+  display: block;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  padding: 0;
+  background-color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+svg {
+  @include fullSize();
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.container {
+  max-width: 1780px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.title {
+  @include bold36;
+}
+
+main {
+  margin: 40px 0;
+  flex: 1;
+}
+
+.auth-page {
+  margin: 68px 0;
+}
+
+@media screen and (max-width: $laptop) {
+  .container {
+    max-width: 1228px;
+  }
+
+  .auth-page {
+    margin: 40px 0;
+  }
+
+  main {
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  main,
+  .auth-page {
+    margin: 20px 0;
+  }
+}

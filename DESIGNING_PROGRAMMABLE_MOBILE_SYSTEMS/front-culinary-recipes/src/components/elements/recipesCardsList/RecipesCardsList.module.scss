@@ -1,0 +1,26 @@
+@import '../../../styles/utils/index.scss';
+
+.cards {
+  @include grid(4);
+  grid-gap: 30px;
+  margin-bottom: 40px;
+}
+
+.nothing {
+  @include regular24Inter;
+  color: $black;
+}
+
+@media (max-width: $tablet) {
+  .cards {
+    @include grid(3);
+  }
+}
+
+@media (max-width: $mob) {
+  .cards {
+    @include grid(2);
+    grid-gap: 24px;
+    margin-bottom: 24px;
+  }
+}

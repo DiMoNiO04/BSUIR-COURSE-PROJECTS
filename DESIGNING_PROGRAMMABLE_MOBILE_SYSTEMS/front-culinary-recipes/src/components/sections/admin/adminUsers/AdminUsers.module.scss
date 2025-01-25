@@ -1,0 +1,63 @@
+@import '../../../../styles/utils/index.scss';
+
+.searchSortContainer {
+  @include flexCenterBetween;
+  margin-bottom: 48px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $greyLight;
+  column-gap: 48px;
+
+  input {
+    @include regular18Inter;
+    color: $black;
+    border: none;
+    background-color: transparent;
+    flex-shrink: 0;
+  }
+
+  span {
+    @include regular16Inter;
+    flex-shrink: 0;
+  }
+}
+
+.sortContainer {
+  @include flexCenterBetween;
+  column-gap: 32px;
+  flex-shrink: 0;
+}
+
+@media (max-width: $tablet) {
+  .searchSortContainer {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    row-gap: 12px;
+    justify-content: space-between;
+
+    & > div,
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .searchSortContainer {
+    flex-wrap: 0;
+    margin-bottom: 24px;
+    row-gap: 12px;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sortContainer {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}

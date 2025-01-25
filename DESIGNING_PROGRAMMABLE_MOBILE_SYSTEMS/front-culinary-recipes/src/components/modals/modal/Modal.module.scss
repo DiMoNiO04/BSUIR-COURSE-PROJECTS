@@ -1,0 +1,116 @@
+@import '../../../styles/utils/index.scss';
+
+.modal {
+  @include fullSize;
+  @include flexCenter;
+  @include hidden;
+  background: transparent;
+  position: fixed;
+  z-index: -100;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  top: 0;
+  left: 0;
+  padding: 24px;
+}
+
+.open {
+  @include visible;
+  z-index: 100;
+  background: #00000080;
+}
+
+.modalInner {
+  @include sizes(470px, auto);
+  @include noScrollLine;
+  background-color: $white;
+  position: relative;
+  overflow: scroll;
+  padding: 56px;
+  box-shadow: 0px 9px 17px 0px #00000012;
+  transition: box-shadow 0.3s ease;
+
+  &.error {
+    box-shadow: 0px 0px 25px 10px rgba(255, 0, 0, 0.5);
+    animation: shake 1.7s;
+  }
+}
+
+.analog {
+  @include regular14Inter;
+  color: $black;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+
+  button {
+    color: $orange;
+    @include regular16Inter;
+    @include transition(color);
+    margin-left: 8px;
+
+    @include hover {
+      color: $black;
+    }
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  svg path {
+    @include transition(fill);
+  }
+
+  @include hover {
+    svg path {
+      fill: $grey;
+    }
+  }
+}
+
+.title {
+  @include bold30Playfair;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $mob) {
+  .modalInner {
+    padding: 56px 24px;
+  }
+
+  .closeBtn {
+    right: 12px;
+    top: 12px;
+  }
+
+  .title {
+    @include bold24Playfair;
+    margin-bottom: 24px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

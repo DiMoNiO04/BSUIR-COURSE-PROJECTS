@@ -1,0 +1,97 @@
+.auth {
+  margin: 0 auto;
+
+  &__container {
+    margin: 0 auto;
+    background-color: $blue50;
+    border-radius: 8px;
+    padding: 30px 42px;
+    width: 628px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    border-radius: 10px;
+    background-color: $blue200;
+    padding: 30px 42px 30px 30px;
+  }
+
+  &__content-title {
+    @include semibold20;
+    margin-bottom: 5px;
+  }
+
+  &__content-block {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    p {
+      @include regular16;
+      color: $blue300;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      @include bold16;
+      @include transition(color);
+      @include hover {
+        color: $blue400;
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 30px;
+    @include flexColumn;
+    row-gap: 25px;
+  }
+
+  &__form-btn {
+    @include medium16;
+    @include sizes(100%, 48px);
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .auth {
+    &__container {
+      padding: 20px 12px;
+      width: 100%;
+    }
+
+    &__content {
+      padding: 24px 16px;
+    }
+
+    &__form {
+      row-gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    &__form-btn {
+      height: 32px;
+      margin-top: 7px;
+    }
+
+    &__content {
+      padding: 12px;
+    }
+
+    &__content-block {
+      @include mb(12px);
+    }
+
+    &__content-title {
+      text-wrap: balance;
+    }
+  }
+}

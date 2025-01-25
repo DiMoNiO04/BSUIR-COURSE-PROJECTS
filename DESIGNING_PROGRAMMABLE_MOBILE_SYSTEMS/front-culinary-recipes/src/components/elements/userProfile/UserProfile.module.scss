@@ -1,0 +1,58 @@
+@import '../../../styles/utils/index.scss';
+
+.avatar {
+  @include sizes(32px, 32px);
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .dropdown {
+      @include visible;
+      z-index: 10;
+    }
+  }
+}
+
+.userProfile {
+  position: relative;
+  line-height: 0;
+}
+
+.dropdown {
+  @include hidden;
+  z-index: -2;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $white;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  li {
+    padding: 8px 12px;
+
+    a,
+    button {
+      @include medium16Inter;
+      @include transition(color);
+      text-decoration: none;
+      color: $black;
+      display: block;
+      white-space: nowrap;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .avatar {
+    @include sizes(24px, 24px);
+  }
+}

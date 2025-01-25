@@ -1,0 +1,58 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &__btn {
+    @include sizes(24px, 24px);
+    position: relative;
+
+    @include hover {
+      svg path:first-child {
+        fill: $blue400;
+        stroke: $blue400;
+      }
+      svg path:last-child {
+        stroke: $white;
+      }
+    }
+
+    &:active {
+      svg path:first-child {
+        fill: $blue400;
+        stroke: $blue400;
+      }
+
+      svg path:last-child {
+        stroke: $white;
+      }
+    }
+
+    svg {
+      fill: none;
+      stroke: $grey300;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      path {
+        transition:
+          fill 0.2s ease,
+          stroke 0.2s ease;
+      }
+    }
+  }
+
+  &__info {
+    @include regular16;
+    color: $grey300;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .pagination {
+    &__btn {
+      @include sizes(20px, 20px);
+    }
+  }
+}

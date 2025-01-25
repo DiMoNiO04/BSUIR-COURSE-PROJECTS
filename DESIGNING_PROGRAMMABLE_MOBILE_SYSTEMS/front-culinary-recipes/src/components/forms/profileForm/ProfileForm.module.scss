@@ -1,0 +1,24 @@
+@import '../../../styles/utils/index.scss';
+
+.form {
+  @include grid(2);
+  grid-gap: 30px;
+  margin-bottom: 24px;
+}
+
+.btnSubmit {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+}
+
+@media (max-width: $mob) {
+  .form {
+    @include grid(1);
+    grid-gap: 8px;
+  }
+
+  .btnSubmit {
+    margin-left: 0;
+  }
+}

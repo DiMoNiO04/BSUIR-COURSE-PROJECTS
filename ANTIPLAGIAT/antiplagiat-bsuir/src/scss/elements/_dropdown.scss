@@ -1,0 +1,135 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  &__btn {
+    @include transition(transform);
+    @include sizes(20px, 20px);
+
+    svg {
+      fill: $grey300;
+      @include transition(transform);
+    }
+  }
+
+  &__headline {
+    @include semibold14;
+    margin-bottom: 7px;
+
+    span {
+      color: $red200;
+    }
+  }
+
+  &__header {
+    @include flexCenterBetween;
+    transition: border-color 0.2s ease;
+    background-color: $white;
+    border-radius: 8px;
+    padding: 14px;
+    transition:
+      border 0.2s ease,
+      border-radius 0.2s ease;
+    border: 1px solid transparent;
+
+    @include hover {
+      border-color: $grey300;
+    }
+  }
+
+  &__content {
+    @include hidden;
+    @include flexColumn;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+    background: $white;
+    transition: all 0.5s ease;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding: 4px 0;
+    height: 150px;
+    max-height: 0;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &__items {
+    @include noScrollLine();
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 10px 16px;
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      color: $blue400;
+    }
+
+    label {
+      @include regular14;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      color: $blue300;
+    }
+  }
+
+  &__value {
+    color: $grey300;
+    @include regular14;
+    @include transition(color);
+  }
+
+  &.--active {
+    .dropdown {
+      &__content {
+        @include visible;
+        max-height: 150px;
+        z-index: 10;
+      }
+
+      &__header {
+        border-radius: 8px 8px 0 0;
+      }
+
+      &__btn svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.--filled {
+    .dropdown {
+      &__value {
+        color: $blue400;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .dropdown {
+    &__header {
+      padding: 5px 14px;
+      border-radius: 4px;
+    }
+
+    &__content {
+      width: calc(100% - 24px);
+    }
+
+    &__item {
+      padding: 8px 16px;
+    }
+  }
+}

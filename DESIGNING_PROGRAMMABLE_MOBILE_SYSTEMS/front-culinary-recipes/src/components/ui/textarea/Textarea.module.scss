@@ -1,0 +1,60 @@
+@import '../../../styles/utils/index.scss';
+
+.textareaContainer {
+  margin-bottom: 32px;
+  position: relative;
+  @include flexColumn;
+  row-gap: 8px;
+
+  &.errorTextarea {
+    .textarea {
+      border-color: $red;
+    }
+
+    .error {
+      color: $red;
+    }
+  }
+}
+
+.notice {
+  @include regular12Inter;
+  color: $orange;
+  font-style: italic;
+}
+
+.textarea {
+  @include noScrollLine;
+  @include regular14Inter;
+  width: 100%;
+  color: $black;
+  padding: 12px;
+  border: 2px solid $greyLight;
+  border-radius: 4px;
+  resize: vertical;
+  resize: none;
+
+  &:read-only {
+    color: $greyLight;
+    cursor: default;
+    background-color: $greyLight;
+  }
+
+  &.error {
+    border-color: $red;
+  }
+}
+
+.error {
+  @include regular12Inter;
+  color: $red;
+  position: absolute;
+  left: 12px;
+  bottom: -16px;
+}
+
+@media (max-width: $mob) {
+  .textareaContainer {
+    @include mb(24px);
+  }
+}

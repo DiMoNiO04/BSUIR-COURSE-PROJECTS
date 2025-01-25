@@ -1,0 +1,187 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram id="0qjC-bllrZd73Xv-mqyu" name="Страница — 1">
+    <mxGraphModel dx="4884" dy="5304" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="T2WdmxnsbqgiLj4T1tLq-22" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontFamily=ISOCPEUR;" parent="1" vertex="1">
+          <mxGeometry x="630" y="-430" width="2150" height="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="node16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BannedUsersController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ banUser(@Request() req, @Body() banUserDto: UserBannedDto)&lt;br&gt;+ unbanUser(@Param(&#39;userId&#39;) userId: number)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="-290" width="390" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RecipesService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- validateBase64Image(image: string): boolean&lt;br&gt;- validateUser(userId: number): Promise&amp;lt;User&amp;gt;&lt;br&gt;- validateRecipe(id: number): Promise&amp;lt;Recipe&amp;gt;&lt;br&gt;+ createRecipe(dto: CreateRecipeDto, authorId: number): Promise&lt;br&gt;+ getAllRecipes()&lt;br&gt;+ getPublishedRecipes()&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getPublishedRecipesByCategoryName(categoryName: string)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getRecipeById(id: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getRecipesByUserId(userId: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ updateRecipe(id: number, dto: UpdateRecipeDto)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ deleteRecipe(id: number, authorId: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ togglePublishRecipe(id: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ searchRecipes(title?: string)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2330" y="230" width="390" height="351" as="geometry" />
+        </mxCell>
+        <mxCell id="node24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FavoritesController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- getUserIdFromRequest(request: Request): number&lt;br&gt;+ addFavorite(@Param(&#39;recipeId&#39;) recipeId: number, @Req request: Request)&lt;br&gt;+ getFavorites(@Req() request: Request)&lt;br&gt;+ removeFavorite(@Param(&#39;recipeId&#39;) recipeId: number, @Req() request: Request)&lt;br&gt;+ removeAllFavorites(@Req() request: Request)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1790" y="-280" width="480" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CategoriesService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- validateBase64Image(image: string): boolean&lt;br&gt;+ createCategory(dto: CreateCategoryDto)&lt;br&gt;+ getCategoryById(name: string)&lt;br&gt;+ updateCategory(name: string, dto: UpdateCategoryDto)&lt;br&gt;+ deleteCategory(name: string)&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2375" y="-28" width="340" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="node17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FavoritesService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- validateUser(userId: number): Promise&amp;lt;User&amp;gt;&lt;br&gt;- validateRecipe(recipeId: number): Promise&amp;lt;Recipe&amp;gt;&lt;br&gt;+ getFavoriteRecipes(userId: number)&lt;br&gt;+ addFavoriteRecipe(userId: number, recipeId: number)&lt;br&gt;+ removeFavoriteRecipe(userId: number, recipeId: number)&lt;br&gt;+ removeAllFavorites(userId: number)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1855" y="-58" width="350" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="node19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CategoriesController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ create(@Body() createCategoryDto: CreateCategoryDto): void&lt;br&gt;+ getAll(): void&lt;br&gt;+ getById(@Param(&#39;name&#39;) name: string): void&lt;br&gt;+ update(@Param(&#39;name&#39;) name: string, @Body() updateCategoryDto)&lt;br&gt;+ delete(@Param(&#39;name&#39;) name: string)&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2340" y="-280" width="410" height="157" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RecipesController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- getUserIdFromRequest(request: Request): number&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ create(@Body() createRecipeDto: CreateRecipeDto, @Req request: Request)&lt;br&gt;+ getAll()&lt;br&gt;+ getPublished()&lt;br&gt;+ getPublishedByCategory(@Param(&#39;categoryName&#39;) categoryName: string)&lt;br&gt;+ getById(@Param(&#39;id&#39;) id: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getByUserId(@Param(&#39;userId&#39;) userId: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ search(@Query(&#39;title&#39;) title?: string)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getMyRecipes(@Req() request: Request)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ update(@Param(&#39;id&#39;) id: number, @Body() updateRecipeDto: UpdateRecipeDto)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ togglePublish(@Param(&#39;id&#39;) id: number)&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ remove(@Param(&#39;id&#39;) id: number, @Req() request: Request)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1780" y="245.5" width="470" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="node12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AuthService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- generateToken(user: User): Promise&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- validateUser(userDto: RegUser | AuthUserDto): Promise&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ login(userDto: AuthUserDto): Promise&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ registration(userDto: RegUserDto): Promise&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1362" y="340" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BannedUsersService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ banUser(requesterId: number, userId: number, reason: string)&lt;br&gt;+ unbanUser(userId: number): Promise&lt;br&gt;+ isUserBanned(email: string): Promise&amp;lt;boolean&amp;gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="-140" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="node14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AuthController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ login(@Body() userDto: AuthUserDto)&lt;br&gt;+ registration(@Body() userDto: RegUserDto)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="136" width="290" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsersController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- getUserIdFromRequest(request: Request): string&lt;br&gt;+ create(@Body() userDto: CreateUserDto): Promise&amp;lt;{message: string, user: User}&amp;gt;&lt;br&gt;+ getAll(): Promise&amp;lt;{message: string, user: User[]}&amp;gt;&lt;br&gt;+ getPersonalData(@Req() request: Request): Promise&amp;lt;{message: string, user: User}&amp;gt;&lt;br&gt;+ changePassword(@Req() request: Request, @Body() changePasswordDto)&lt;br&gt;+ updateNameAndSurname(@Req() request: Request, @Body() updUserDto)&lt;br&gt;+ deleteSelf(@Req() request: Request):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string}&amp;gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="785" y="270" width="497" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="node26" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RolesService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ createRole(dto: CreateRoleDto):&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: Role}&amp;gt;&lt;/span&gt;&lt;br&gt;+ getRoleByValue(value: string):&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: Role}&amp;gt;&lt;/span&gt;&lt;br&gt;+ updateRole(id: number, dto: UpdateRoleDto):&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: Role}&amp;gt;&lt;/span&gt;&lt;br&gt;+ getAllRoles():&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: Role[]}&amp;gt;&lt;/span&gt;&lt;br&gt;+ getUsersByRole(roleValue: string):&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: User[]}&amp;gt;&lt;/span&gt;&lt;br&gt;+ changeUserRole(userId: number, newRoleId: number):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string, data: Role}&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ deleteRole(id: number):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string}&amp;gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="-30" width="555" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsersService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- isSimilar(oldPassword: string, newPassword: string): boolean&lt;br&gt;+ createUser(dto: RegUserDto): Promise&amp;lt;{message: string, user: User}&amp;gt;&lt;br&gt;+ getUserById(userId: number): Promise&amp;lt;{message: string, user: User}&amp;gt;&lt;br&gt;+ getAllUsers(): Promise&amp;lt;{message: string, user: User[]}&amp;gt;&lt;br&gt;+ getUsersByEmail(email: string): Promise&amp;lt;{message: string, user: User}&amp;gt;&lt;br&gt;+ updateProfile(userId: number, updateUserDto: UpdateUserDto): Promise&amp;lt;{message: string}&amp;gt;&lt;br&gt;+ changePassword(userId: number, changePasswordDto):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string}&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ deleteUser(id: number):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Promise&amp;lt;{message: string}&amp;gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="581" width="547" height="238" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RolesController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ create (@Body() dto: CreateRoleDto)&lt;br&gt;+ getAllUsers()&lt;br&gt;+ getRole(@Param(&#39;value&#39;) value: string)&lt;br&gt;+ getUsersByRole(@Param(&#39;roleValue&#39;) roleValue: string)&lt;br&gt;+ updateRole(@Param(&#39;id&#39;) id: number, @Body() dto: CreateRoleDto)&lt;br&gt;+ changeUserRole(@Body() changeUserRoleDto: ChangeUserRoleDto)&lt;br&gt;+ deleteRole(@Param(&#39;id&#39;) id: number&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=ISOCPEUR;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="-290" width="435" height="197" as="geometry" />
+        </mxCell>
+        <mxCell id="T2WdmxnsbqgiLj4T1tLq-21" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;UML диаграмма классов&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=ISOCPEUR;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="-390" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node22" target="node3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="990" y="-50" as="sourcePoint" />
+            <mxPoint x="1040" y="-100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node26" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="970" y="510" as="sourcePoint" />
+            <mxPoint x="1020" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-6" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node13" target="node19" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1610" y="500" as="sourcePoint" />
+            <mxPoint x="1660" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="node24" target="node17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1620" y="-18" as="sourcePoint" />
+            <mxPoint x="1620" y="2.710678118654755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-8" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node12" target="node14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2070" y="600" as="sourcePoint" />
+            <mxPoint x="2120" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-9" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node1" target="node16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2060" y="100" as="sourcePoint" />
+            <mxPoint x="2110" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-10" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="node6" target="node8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2530" y="130" as="sourcePoint" />
+            <mxPoint x="2580" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-11" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="BjSATbMnPXW-7-h8t7vp-12" target="node22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1730" y="750" as="sourcePoint" />
+            <mxPoint x="1780" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1550" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-12" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1535.26" y="494" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-16" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="node1" target="BjSATbMnPXW-7-h8t7vp-17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1555" y="500" as="sourcePoint" />
+            <mxPoint x="1332" y="695" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1525" y="80" />
+              <mxPoint x="1320" y="80" />
+              <mxPoint x="1320" y="250" />
+              <mxPoint x="1320" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-17" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="1340.52" y="409.08" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-18" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="node26" target="BjSATbMnPXW-7-h8t7vp-19" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1555" y="520" as="sourcePoint" />
+            <mxPoint x="1317" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="75" />
+              <mxPoint x="700" y="390" />
+              <mxPoint x="700" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-19" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="740.52" y="694.08" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-23" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryX=0.582;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="node6" target="node13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2520" y="210" as="sourcePoint" />
+            <mxPoint x="2570" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-24" value="" style="endArrow=none;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="node22" target="BjSATbMnPXW-7-h8t7vp-25" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1660" y="720" as="sourcePoint" />
+            <mxPoint x="1710" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1740" y="760" />
+              <mxPoint x="1740" y="190" />
+              <mxPoint x="1943" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-25" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1932" y="140" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-27" value="" style="endArrow=none;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=1;exitY=0.895;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="node22" target="BjSATbMnPXW-7-h8t7vp-28" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2080" y="850" as="sourcePoint" />
+            <mxPoint x="2130" y="800" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2509" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-28" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="2500" y="585.52" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-30" value="" style="endArrow=none;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="BjSATbMnPXW-7-h8t7vp-31" target="node6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2250" y="220" as="sourcePoint" />
+            <mxPoint x="2300" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2260" y="39" />
+              <mxPoint x="2260" y="190" />
+              <mxPoint x="2428" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BjSATbMnPXW-7-h8t7vp-31" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="2205" y="33.08" width="19.48" height="11.84" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

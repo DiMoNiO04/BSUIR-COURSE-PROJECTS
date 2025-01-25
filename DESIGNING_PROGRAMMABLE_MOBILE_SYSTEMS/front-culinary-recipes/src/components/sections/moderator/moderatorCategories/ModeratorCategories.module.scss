@@ -1,0 +1,46 @@
+@import '../../../../styles/utils/index.scss';
+
+.cards {
+  @include grid(3);
+  grid-gap: 40px;
+}
+
+.titles {
+  @include flexCenterBetween;
+  column-gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $greyLight;
+  margin-bottom: 64px;
+}
+
+.title {
+  margin: 0;
+}
+
+@media (max-width: $tablet) {
+  .cards {
+    @include grid(2);
+    grid-gap: 32px;
+  }
+
+  .titles {
+    column-gap: 30px;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $mob) {
+  .cards {
+    grid-gap: 24px;
+  }
+
+  .titles {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    row-gap: 20px;
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,7 @@
+﻿  Source.cpp
+F:\ТРПО\SM_1\SM_11\Source.cpp(76,10): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+F:\ТРПО\SM_1\SM_11\Source.cpp(106,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+F:\ТРПО\SM_1\SM_11\Source.cpp(108,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+F:\ТРПО\SM_1\SM_11\Source.cpp(105,17): warning C4101: Characters: неиспользованная локальная переменная
+F:\ТРПО\SM_1\SM_11\Source.cpp(105,7): warning C4101: Password: неиспользованная локальная переменная
+  SM_11.vcxproj -> F:\ТРПО\SM_1\Debug\SM_11.exe

@@ -1,0 +1,121 @@
+@import '../../../styles/utils/index.scss';
+
+.section {
+  margin-top: 160px;
+}
+
+.titles {
+  @include flexCenterBetween;
+  column-gap: 48px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $greyLight;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.titleBlock {
+  @include flexCenter;
+  column-gap: 16px;
+
+  img {
+    @include sizes(44px, 44px);
+  }
+
+  h1 {
+    @include bold60Playfair;
+    margin: 0;
+  }
+}
+
+.info {
+  @include flexCenterBetween;
+  margin-bottom: 60px;
+}
+
+.count {
+  @include regular16Inter;
+}
+
+.btnDel {
+  @include flexCenter;
+  column-gap: 8px;
+  flex-shrink: 0;
+
+  img {
+    @include sizes(20px, 20px);
+  }
+
+  span {
+    @include regular16Inter;
+    @include transition(color);
+  }
+
+  @include hover {
+    span {
+      color: $orange;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .section {
+    margin-top: 120px;
+  }
+
+  .info {
+    margin-bottom: 40px;
+  }
+
+  .titles {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    h1 {
+      @include bold40Playfair;
+    }
+
+    img {
+      @include sizes(32px, 32px);
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .section {
+    margin-top: 96px;
+  }
+
+  .info {
+    margin-bottom: 32px;
+  }
+
+  .titles {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+
+    h1 {
+      @include bold30Playfair;
+    }
+  }
+
+  .titleBlock {
+    column-gap: 8px;
+
+    img {
+      @include sizes(24px, 24px);
+    }
+  }
+
+  .btnDel {
+    column-gap: 4px;
+
+    img {
+      @include sizes(16px, 16px);
+    }
+
+    span {
+      @include regular14Inter;
+    }
+  }
+}

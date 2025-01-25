@@ -1,0 +1,120 @@
+@mixin bold36 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+@mixin bold26 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@mixin bold18 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+@mixin bold16 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 14px;
+  }
+}
+
+@mixin semibold26 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@mixin semibold20 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@mixin semibold18 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+@mixin semibold14 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+@mixin medium26 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@mixin medium16 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin medium14 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin regular26 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin regular24 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+@mixin regular18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@mixin regular16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin regular14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin light300 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}

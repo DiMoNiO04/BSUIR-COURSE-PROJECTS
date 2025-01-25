@@ -1,0 +1,38 @@
+@import '../../../styles/utils/index.scss';
+
+.img {
+  margin-bottom: 10px;
+
+  img {
+    @include transition(transform);
+    border-radius: 50px;
+  }
+}
+
+.name {
+  @include medium16Inter;
+  margin-bottom: 4px;
+  color: $black;
+  text-align: center;
+}
+
+.description {
+  @include regular12Inter;
+  color: $grey;
+  text-align: center;
+}
+
+@media (max-width: $mob) {
+  .img {
+    margin-bottom: 6px;
+  }
+
+  .name {
+    @include medium14Inter;
+    margin-bottom: 6px;
+  }
+
+  .description {
+    @include regular10Inter;
+  }
+}

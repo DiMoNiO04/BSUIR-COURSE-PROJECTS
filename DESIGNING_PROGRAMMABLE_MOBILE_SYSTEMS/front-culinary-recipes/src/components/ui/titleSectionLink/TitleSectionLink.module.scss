@@ -1,0 +1,26 @@
+@import '../../../styles/utils/index.scss';
+
+.link {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: italic;
+  color: $black;
+  border-bottom: 1px solid $black;
+  transition:
+    color 0.2s ease,
+    border-bottom 0.2s ease;
+
+  @include hover {
+    color: $grey;
+    border-color: none;
+  }
+}
+
+@media (max-width: $mob) {
+  .link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

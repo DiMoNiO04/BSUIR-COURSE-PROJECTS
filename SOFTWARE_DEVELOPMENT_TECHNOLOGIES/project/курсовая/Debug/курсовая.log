@@ -1,0 +1,7 @@
+﻿  Autorization.cpp
+  Validation.cpp
+F:\Study 2 semester\курсовая\курсовая\Validation.cpp(92,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+F:\Study 2 semester\курсовая\курсовая\Validation.cpp(159): warning C4715: isLoginPasswordRangeCorrect: значение возвращается не при всех путях выполнения
+F:\Study 2 semester\курсовая\курсовая\Autorization.cpp(71): warning C4715: checkLoginAndPasswordForEntrance: значение возвращается не при всех путях выполнения
+  курсовая.vcxproj -> F:\Study 2 semester\курсовая\Debug\курсовая.exe

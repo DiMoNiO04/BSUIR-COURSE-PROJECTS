@@ -1,0 +1,9 @@
+export { ChangeUserRoleDto } from './dto/change-user-role.dto';
+export { CreateRoleDto } from './dto/create-role.dto';
+export { UpdateRoleDto } from './dto/update-role.dto';
+export { Roles } from './roles-auth.decorator';
+export { RolesController } from './roles.controller';
+export { Role } from './roles.model';
+export { RolesModule } from './roles.module';
+export { RolesService } from './roles.service';
+export { UserRoles } from './user-roles.model';

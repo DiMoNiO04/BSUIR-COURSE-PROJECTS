@@ -1,0 +1,51 @@
+@import '../../../styles/utils/index.scss';
+
+.container {
+  @include grid(2);
+  column-gap: 40px;
+}
+
+.title {
+  @include bold60Playfair;
+  margin-bottom: 20px;
+  color: $black;
+}
+
+.subtitle {
+  @include regular24Inter;
+  color: $black;
+}
+
+@media (max-width: $tablet) {
+  .container {
+    column-gap: 30px;
+  }
+
+  .title {
+    @include bold40Playfair;
+  }
+
+  .subtitle {
+    @include regular18Inter;
+  }
+}
+
+@media (max-width: $mob) {
+  .container {
+    @include grid(1);
+    row-gap: 8px;
+  }
+
+  .info {
+    order: 1;
+  }
+
+  .title {
+    @include bold24Playfair;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    @include regular14Inter;
+  }
+}

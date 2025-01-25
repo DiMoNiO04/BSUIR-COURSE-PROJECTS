@@ -1,0 +1,129 @@
+@import '../../../styles/utils/index.scss';
+
+.container {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.label {
+  @include regular18Inter;
+  margin-bottom: 4px;
+}
+
+.dropdown {
+  @include flexCenterBetween;
+  @include transition(border);
+  column-gap: 12px;
+  padding: 6px 8px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdownOpen {
+  border-color: $grey;
+}
+
+.optionBlock {
+  @include flexCenterBetween;
+}
+
+.optionText {
+  @include regular16Inter;
+  text-transform: capitalize;
+}
+
+.icon {
+  @include sizes(24px, 24px);
+  @include transition(transform);
+  display: block;
+
+  svg {
+    @include fullSize;
+    display: block;
+  }
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.optionsContainer {
+  @include noScrollLine;
+  position: absolute;
+  margin-top: 7px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 170px;
+  overflow-y: auto;
+}
+
+.optionCont {
+  @include flexColumn;
+  row-gap: 20px;
+  padding: 12px;
+}
+
+.optionLabel {
+  @include regular14Inter;
+  @include transition(color);
+  cursor: pointer;
+  width: 100%;
+
+  @include hover {
+    color: $grey;
+  }
+}
+
+.option {
+  line-height: 0;
+
+  input {
+    display: none;
+  }
+}
+
+.optionLabelSelected {
+  color: $orange;
+}
+
+.optionLabelUnselected {
+  color: $black;
+}
+
+@media (max-width: $mob) {
+  .label {
+    @include regular16Inter;
+    margin-bottom: 4px;
+  }
+
+  .container {
+    min-width: 108px;
+  }
+
+  .dropdown {
+    padding: 4px 8px;
+  }
+
+  .optionLabel {
+    @include regular12Inter;
+  }
+
+  .icon {
+    @include sizes(20px, 20px);
+  }
+
+  .optionCont {
+    row-gap: 16px;
+    padding: 10px;
+  }
+
+  .optionText {
+    @include regular14Inter;
+  }
+}

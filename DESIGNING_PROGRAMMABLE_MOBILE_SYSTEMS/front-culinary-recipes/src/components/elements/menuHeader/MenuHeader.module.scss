@@ -1,0 +1,50 @@
+@import '../../../styles/utils/index.scss';
+
+.menu {
+  @include flexCenter;
+  column-gap: 48px;
+}
+
+.menuItem {
+  position: relative;
+
+  a {
+    @include flexCenter;
+    @include medium16Inter;
+    @include transition(color);
+    column-gap: 4px;
+    color: $black;
+
+    @include hover {
+      color: $grey;
+
+      .icon {
+        transform: rotate(180deg);
+        color: $grey;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .nav {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 40px 24px;
+    margin: 0 auto 24px;
+    border-bottom: 1px solid $greyLight;
+  }
+
+  .menu {
+    @include flexColumn;
+    row-gap: 24px;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: $mob) {
+  .nav {
+    padding: 0 0 24px;
+  }
+}

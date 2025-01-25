@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Вход</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__logo logo">
+        <img src="./assets/img/logo.svg" alt="БГУИР" />
+      </div>
+    </div>
+  </div>
+</header>
+ <main class="auth-page">
+  <section class="auth">
+    <div class="container">
+      <div class="auth__container">
+        <h1 class="auth__title title">Личный кабинет</h1>
+        <form class="auth__form" id="auth-form">
+          <div class="auth__form-input input">
+            <label class="input__label" for="login">Логин</label>
+            <input autocomplete="off" class="input__input" type="text" placeholder="Введите логин" name="login" />
+            <div class="input__btn-notify js-notify" data-notify="Менее 8 символов">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#input-error"></use>
+              </svg>
+            </div>
+            <div class="input__error">Некорректный формат логина!</div>
+          </div>
+          <div class="auth__form-input input input--pass">
+            <label class="input__label" for="login">Пароль</label>
+            <input
+              autocomplete="off"
+              class="input__input"
+              type="password"
+              placeholder="Введите пароль"
+              name="password"
+            />
+            <button type="button" class="input__btn">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#pass-open"></use>
+              </svg>
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#pass-close"></use>
+              </svg>
+            </button>
+            <div class="input__btn-notify js-notify" data-notify="Менее 8 символов">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#input-error"></use>
+              </svg>
+            </div>
+            <div class="input__error">Некорректный формат пароля!</div>
+          </div>
+          <button class="auth__form-btn btn btn-def" form="auth-form" type="submit">Войти</button>
+        </form>
+        <div class="auth__content">
+          <div class="auth__content-block">
+            <h2 class="auth__content-title">Вы в первый раз на нашем сайте?</h2>
+            <p>Учетные данные для авторизации аналогичны тем, которые используются для доступа к ИИС БГУИР.</p>
+            <p>
+              Логин для студентов — номер студенческого билета, для преподавателей — имя почтового ящика БГУИР без
+              @bsuir.by.
+            </p>
+          </div>
+          <div class="auth__content-block">
+            <h2 class="auth__content-title">
+              Что делать, если логин/пароль <br />
+              не работает?
+            </h2>
+            <p>
+              В случае возникновения проблем со входом студентам необходимо восстановить пароль в ИИС, преподавателям —
+              в
+              <a href="https://account.bsuir.by/password-recovery">Кабинете сотрудника БГУИР</a>
+            </p>
+            <p>
+              Если самостоятельно сбросить пароль не удалось, воспользуйтесь пунктом
+              «<a href="https://courses.bsuir.by/customforms/form1.html">Восстановление пароля</a>»
+              в
+              <a href="https://courses.bsuir.by/customforms/form1.html">форме связи с техподдержкой.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button type="button" class="btn-up js-btn-up">
+  <svg>
+    <use xlink:href="assets/img/sprite.svg#header-btn"></use>
+  </svg>
+</button>
+
+</main>
+ <footer class="footer"></footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container modal-doc" role="dialog" aria-modal="true" data-graph-target="modal-doc">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Оценить документ</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы вынести окончательное решение о данном документе?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>ФИО</div>
+          <div class="js-modal-doc-name"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-sec js-modal-close js-result-no-success">
+          <span>Отправить на доработку</span>
+        </button>
+        <button type="button" class="modal-doc__btn btn-def js-modal-close js-result-success">
+          <span>Зачтен</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-load" role="dialog" aria-modal="true" data-graph-target="modal-load">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-load__container">
+      <h2 class="modal-load__title">Загрузка документа</h2>
+      <form class="modal-load__form" id="modal-doc-form">
+        <div class="modal-load__input input">
+          <label class="input__label" for="name">Название работы <span>*</span></label>
+          <input autocomplete="off" class="input__input" type="text" placeholder="Название работы" name="name" />
+          <div class="input__btn-notify js-notify" data-notify="Менее 8 символов">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#input-error"></use>
+            </svg>
+          </div>
+          <div class="input__error">Некорректное название работы!</div>
+        </div>
+        <div class="modal-load__dropdown dropdown js-dropdown">
+          <div class="dropdown__headline">Тип работы <span>*</span></div>
+          <div class="dropdown__header js-dropdown-inner">
+            <div class="dropdown__value js-dropdown-value">Тип работы</div>
+            <button type="button" class="dropdown__btn">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown__content">
+            <div class="dropdown__items" data-simplebar>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-1" type="radio" name="item" value="item-1" />
+                <label for="item-1">Item-1</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-2" type="radio" name="item" value="item-2" />
+                <label for="item-2">Item-2</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-3" type="radio" name="item" value="item-3" />
+                <label for="item-3">Item-3</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-4" type="radio" name="item" value="item-4" />
+                <label for="item-4">Item-4</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-5" type="radio" name="item" value="item-5" />
+                <label for="item-5">Item-5</label>
+              </div>
+              <div class="dropdown__item js-dropdown-item">
+                <input id="item-6" type="radio" name="item" value="item-6" />
+                <label for="item-6">Item-6</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-load__drag-area drag-area">
+          <div class="drag-area__form">
+            <button class="drag-area__btn btn btn-def" type="button">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#paper"></use>
+              </svg>
+              Загрузить документ
+            </button>
+            <p class="drag-area__up">ИЛИ ПЕРЕТАЩИТЕ ФАЙЛЫ СЮДА</p>
+            <p class="drag-area__sm">
+              Допустимый формат документа: *pdf <br />
+              Максимальный размер: 10 МБ
+            </p>
+            <input type="file" hidden name="file" accept="application/pdf" />
+          </div>
+          <div class="drag-area__files"></div>
+        </div>
+        <button class="modal-load__btn btn btn-def" type="submit" form="modal-doc-form">Проверить</button>
+      </form>
+    </div>
+  </div>
+  <div
+    class="graph-modal__container modal-doc modal-protection"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-protection"
+  >
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="modal-doc__container">
+      <h2 class="modal-doc__title">Отправить документ на защиту</h2>
+      <p class="modal-doc__subtitle">Вы уверены, что готовы отправить документ на защиту необратима?</p>
+      <div class="modal-doc__items">
+        <div class="modal-doc__item">
+          <div>Оригинальность</div>
+          <div class="js-modal-doc-orig"></div>
+        </div>
+        <div class="modal-doc__item">
+          <div>Название</div>
+          <div class="js-modal-doc-file"></div>
+        </div>
+      </div>
+      <div class="modal-doc__btns">
+        <button type="button" class="modal-doc__btn btn-def js-modal-close">
+          <span>Отправить</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="./js/main.js"></script>
+
+  </body>
+</html>

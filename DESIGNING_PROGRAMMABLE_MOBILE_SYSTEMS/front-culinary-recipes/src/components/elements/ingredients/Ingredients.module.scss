@@ -1,0 +1,50 @@
+@import '../../../styles/utils/index.scss';
+
+.title {
+  @include bold30Playfair;
+  margin-bottom: 32px;
+}
+
+.list {
+  @include flexColumn;
+  row-gap: 20px;
+
+  li {
+    @include regular16Inter;
+    @include flexStart;
+    column-gap: 8px;
+    position: relative;
+
+    &::before {
+      content: '';
+      @include sizes(12px, 12px);
+      border-radius: 50%;
+      border: 1.5px solid $black;
+      background-color: transparent;
+      position: relative;
+      top: 5px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .title {
+    @include bold24Playfair;
+    margin-bottom: 24px;
+  }
+
+  .list {
+    row-gap: 16px;
+
+    li {
+      @include regular16Inter;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .title {
+    margin-bottom: 16px;
+  }
+}

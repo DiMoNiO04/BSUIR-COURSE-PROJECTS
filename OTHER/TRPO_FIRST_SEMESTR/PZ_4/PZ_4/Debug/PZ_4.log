@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\37529\Documents\GitHub\TRPO\PZ_4\PZ_4\Source.cpp(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\37529\Documents\GitHub\TRPO\PZ_4\PZ_4\Source.cpp(162,23): warning C4101: sredneeFour: неиспользованная локальная переменная
+  PZ_4.vcxproj -> C:\Users\37529\Documents\GitHub\TRPO\PZ_4\Debug\PZ_4.exe

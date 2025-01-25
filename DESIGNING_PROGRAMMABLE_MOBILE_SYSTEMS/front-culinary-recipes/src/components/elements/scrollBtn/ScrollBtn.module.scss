@@ -1,0 +1,23 @@
+@import '../../../styles/utils/index.scss';
+
+.btn {
+  @include sizes(40px, 40px);
+  @include flexCenter;
+  @include transition(background-color);
+  position: fixed;
+  border-radius: 50%;
+  bottom: 24px;
+  right: 24px;
+  z-index: 96;
+  background-color: $greyLight;
+  cursor: pointer;
+
+  @include hover {
+    background-color: $grey;
+  }
+
+  img {
+    @include sizes(24px, 24px);
+    transform: rotate(180deg);
+  }
+}

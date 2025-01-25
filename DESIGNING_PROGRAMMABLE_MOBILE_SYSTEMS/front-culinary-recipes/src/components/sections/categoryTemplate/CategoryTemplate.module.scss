@@ -1,0 +1,80 @@
+@import '../../../styles/utils/index.scss';
+
+.sectionFirst {
+  margin-top: 100px;
+}
+
+.block {
+  @include flexEndBetween;
+  column-gap: 40px;
+  margin-bottom: 64px;
+}
+
+.titles {
+  @include flexColumn;
+  row-gap: 14px;
+  max-width: 730px;
+}
+
+.titleBlock {
+  @include flexEndStart;
+  column-gap: 16px;
+
+  span {
+    @include regular16Inter;
+    margin-bottom: 12px;
+  }
+}
+
+.title {
+  @include bold60Playfair;
+  color: $black;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  @include regular18Inter;
+}
+
+@media (max-width: $tablet) {
+  .sectionFirst {
+    margin: 64px 0;
+  }
+
+  .titleBlock {
+    column-gap: 12px;
+
+    span {
+      @include regular14Inter;
+      margin-bottom: 8px;
+    }
+  }
+
+  .title {
+    @include bold40Playfair;
+  }
+
+  .subtitle {
+    @include regular16Inter;
+  }
+}
+
+@media (max-width: $mob) {
+  .sectionFirst {
+    margin-bottom: 16px;
+  }
+
+  .block {
+    flex-direction: column;
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    @include bold30Playfair;
+  }
+
+  .subtitle {
+    @include regular14Inter;
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../../styles/utils/index.scss';
+
+.panel {
+  @include sizes(100%, 100vh);
+  @include transition(transform);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: $whiteDark;
+  transform: translateY(-100%);
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+.container {
+  height: 100%;
+  padding: 50px 0;
+}
+
+.nothing {
+  @include regular18Inter;
+}
+
+.cards {
+  @include noScrollLine;
+  overflow-y: scroll;
+  max-height: calc(100vh - 260px);
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.block {
+  @include flexCenterBetween;
+  margin-bottom: 40px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $black;
+
+  input {
+    @include regular18Inter;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: $black;
+  }
+
+  button {
+    @include sizes(24px, 24px);
+
+    svg path {
+      @include transition(fill);
+    }
+  }
+
+  @include hover {
+    button {
+      svg path {
+        fill: $grey;
+      }
+    }
+  }
+}
+
+.btn {
+  @include flexCenter;
+  width: 100%;
+
+  a {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: $mob) {
+  .container {
+    padding: 16px 0;
+  }
+
+  .cards {
+    max-height: calc(100vh - 140px);
+  }
+
+  .cards,
+  .block {
+    margin-bottom: 20px;
+  }
+
+  .block {
+    padding-bottom: 10px;
+
+    input {
+      @include regular14Inter;
+    }
+
+    button {
+      @include sizes(16px, 16px);
+    }
+  }
+}

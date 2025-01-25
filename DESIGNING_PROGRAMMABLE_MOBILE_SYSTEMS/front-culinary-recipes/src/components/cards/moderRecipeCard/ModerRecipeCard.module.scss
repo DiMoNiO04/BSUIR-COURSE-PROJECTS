@@ -1,0 +1,126 @@
+@import '../../../styles/utils/index.scss';
+
+.card {
+  @include flexColumn;
+  row-gap: 8px;
+  position: relative;
+
+  &.noPublish {
+    img {
+      opacity: 0.5;
+    }
+  }
+
+  @include hover {
+    .name {
+      color: $grey;
+    }
+
+    .img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.img {
+  @include transition(transform);
+  border-radius: 6px;
+
+  img {
+    border-radius: 6px;
+  }
+}
+
+.name {
+  @include semibold18Inter;
+  @include transition(color);
+  @include croppingText(2);
+  text-align: left;
+  color: $black;
+}
+
+.actions {
+  @include flexCenterBetween;
+  position: absolute;
+  right: 12px;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
+}
+
+.deleteButton {
+  @include sizes(32px, 32px);
+  @include flexCenter;
+  background-color: $white;
+  border-radius: 4px;
+  z-index: 2;
+
+  svg {
+    @include sizes(24px, 24px);
+  }
+}
+
+.unpublishButton,
+.publishButton {
+  @include transition(background-color);
+  @include regular18Inter;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: $white;
+}
+
+.unpublishButton {
+  background-color: rgb(244, 147, 147);
+
+  @include hover {
+    background-color: $red;
+  }
+}
+
+.publishButton {
+  background-color: rgb(167, 247, 167);
+
+  @include hover {
+    background-color: green;
+  }
+}
+
+@media (max-width: $tablet) {
+  .unpublishButton,
+  .publishButton {
+    @include regular16Inter;
+  }
+
+  .actions {
+    right: 10px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .deleteButton {
+    @include sizes(28px, 28px);
+  }
+}
+
+@media (max-width: $mob) {
+  .name {
+    @include semibold14Inter;
+  }
+
+  .actions {
+    @include flexCenterBetween;
+    position: absolute;
+    right: 12px;
+    left: 12px;
+    top: 12px;
+    z-index: 2;
+  }
+
+  .deleteButton {
+    @include sizes(24px, 24px);
+
+    svg {
+      @include sizes(16px, 16px);
+    }
+  }
+}
