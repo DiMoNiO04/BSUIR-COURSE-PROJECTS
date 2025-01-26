@@ -11,7 +11,7 @@ The following technologies and tools were utilized across various projects:
 - **Backend**: PHP, NestJS.
 - **Databases**: PostgreSQL, MySQL.
 - **Other Tools**: JWT, Expo, Visual Studio Code.
-- **Programming Languages**: JavaScript, TypeScript, Nest, PHP.
+- **Programming Languages**: JavaScript, TypeScript, Nest, PHP, C++, Kotlin.
 
 ---
 
@@ -19,5 +19,4 @@ The following technologies and tools were utilized across various projects:
 - Successfully implemented multiple role-based access control systems.
 - Developed a full-stack mobile application in under six months.
 - Conducted thorough data analysis on real-world datasets.
-- 
 ---
